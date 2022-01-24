@@ -1,0 +1,752 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="brnSaleDetail" xml:space="preserve">
+    <value>Sales Detail</value>
+    <comment>Sales Detail</comment>
+  </data>
+  <data name="BtnAdd" xml:space="preserve">
+    <value>Add</value>
+    <comment>Add</comment>
+  </data>
+  <data name="btnAddCustomer" xml:space="preserve">
+    <value>Add Customer</value>
+    <comment>Add Customer</comment>
+  </data>
+  <data name="btnAddVendor" xml:space="preserve">
+    <value>Add Vendor</value>
+    <comment>Add Vendor</comment>
+  </data>
+  <data name="BtnAssignUnits" xml:space="preserve">
+    <value>Unit Assign</value>
+    <comment>Unit Assign</comment>
+  </data>
+  <data name="btnBetween" xml:space="preserve">
+    <value>Between</value>
+    <comment>Between</comment>
+  </data>
+  <data name="BtnCancel" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Cancel</comment>
+  </data>
+  <data name="btnClear" xml:space="preserve">
+    <value>Clear</value>
+    <comment>Clear</comment>
+  </data>
+  <data name="btnCreateStore" xml:space="preserve">
+    <value>Setup Your Store</value>
+    <comment>Setup Your Store</comment>
+  </data>
+  <data name="btnCreateUser" xml:space="preserve">
+    <value>Create User</value>
+    <comment>Create User</comment>
+  </data>
+  <data name="BtnDelete" xml:space="preserve">
+    <value>Delete</value>
+    <comment>Delete</comment>
+  </data>
+  <data name="BtnEdit" xml:space="preserve">
+    <value>Edit</value>
+    <comment>Edit</comment>
+  </data>
+  <data name="btnExit" xml:space="preserve">
+    <value>Exit</value>
+    <comment>Exit</comment>
+  </data>
+  <data name="btnFind" xml:space="preserve">
+    <value>Find</value>
+    <comment>Find</comment>
+  </data>
+  <data name="btnInvoiceDetail" xml:space="preserve">
+    <value>Invoice Detail</value>
+    <comment>Invoice Detail</comment>
+  </data>
+  <data name="btnItemsBarcode" xml:space="preserve">
+    <value>Items Bracode</value>
+    <comment>Items Barcode</comment>
+  </data>
+  <data name="btnItemsCategory" xml:space="preserve">
+    <value>Items SubType</value>
+    <comment>Items Sub Type</comment>
+  </data>
+  <data name="btnItemsdefinition" xml:space="preserve">
+    <value>Items Definition</value>
+    <comment>Items Definition</comment>
+  </data>
+  <data name="btnItemsSize" xml:space="preserve">
+    <value>Define Item Size</value>
+    <comment>Define Item Size</comment>
+  </data>
+  <data name="btnItemsType" xml:space="preserve">
+    <value>Define Items Type</value>
+    <comment>Define Items Type</comment>
+  </data>
+  <data name="btnItemsUnit" xml:space="preserve">
+    <value>Define Items Unit</value>
+    <comment>Define Items Unit</comment>
+  </data>
+  <data name="BtnLogin" xml:space="preserve">
+    <value>Login</value>
+    <comment>Login</comment>
+  </data>
+  <data name="BtnNew" xml:space="preserve">
+    <value>New</value>
+    <comment>New</comment>
+  </data>
+  <data name="btnRptItemsDetail" xml:space="preserve">
+    <value>Item Detail</value>
+    <comment>Item Detail</comment>
+  </data>
+  <data name="btnSales" xml:space="preserve">
+    <value>New Sale Invoice</value>
+    <comment>New Sale Invoice</comment>
+  </data>
+  <data name="btnSalesReturns" xml:space="preserve">
+    <value>Sales Invoice Return</value>
+    <comment>Sales Invoice Return</comment>
+  </data>
+  <data name="BtnSave" xml:space="preserve">
+    <value>Save</value>
+    <comment>Save</comment>
+  </data>
+  <data name="BtnSearch" xml:space="preserve">
+    <value>Search</value>
+    <comment>Search</comment>
+  </data>
+  <data name="btnSizeAssign" xml:space="preserve">
+    <value>Size Assign</value>
+    <comment>Size Assign</comment>
+  </data>
+  <data name="BtnStock" xml:space="preserve">
+    <value>Manage Your Stock</value>
+    <comment>Manage Your Stock</comment>
+  </data>
+  <data name="btnStockDetail" xml:space="preserve">
+    <value>Stock Detail</value>
+    <comment>Stock Detail</comment>
+  </data>
+  <data name="btnStockInDetail" xml:space="preserve">
+    <value>Stock in Detail</value>
+    <comment>Stock in Detail</comment>
+  </data>
+  <data name="btnStockOutDetail" xml:space="preserve">
+    <value>Stock Out Detail</value>
+    <comment>Stock Out Detail</comment>
+  </data>
+  <data name="btnToday" xml:space="preserve">
+    <value>Today</value>
+    <comment>Today</comment>
+  </data>
+  <data name="btnUserRole" xml:space="preserve">
+    <value>Define User Role</value>
+    <comment>Define User Role</comment>
+  </data>
+  <data name="btnYesterday" xml:space="preserve">
+    <value>Yesterday</value>
+    <comment>Yesterday</comment>
+  </data>
+  <data name="CkEActive" xml:space="preserve">
+    <value>Active</value>
+    <comment>Active</comment>
+  </data>
+  <data name="CkEIsPacked" xml:space="preserve">
+    <value>Packed</value>
+    <comment>Packed</comment>
+  </data>
+  <data name="Created_By" xml:space="preserve">
+    <value>Created By</value>
+    <comment>Created By</comment>
+  </data>
+  <data name="frmCustomerDeffination" xml:space="preserve">
+    <value>Customer Definition</value>
+    <comment>Customer Definition</comment>
+  </data>
+  <data name="frmItems_Deffination" xml:space="preserve">
+    <value>Items Definition</value>
+    <comment>Items Definition</comment>
+  </data>
+  <data name="frmPurchaseInvoices" xml:space="preserve">
+    <value>Purchase Invoice</value>
+    <comment>Purchase Invoice</comment>
+  </data>
+  <data name="frmSalesInvoices" xml:space="preserve">
+    <value>Sales Invoice</value>
+    <comment>Sales Invoice</comment>
+  </data>
+  <data name="frmSizAssigns" xml:space="preserve">
+    <value>Assign Size</value>
+    <comment>Assign Size</comment>
+  </data>
+  <data name="frmStore_Deffination" xml:space="preserve">
+    <value>Setup Your Store</value>
+    <comment>Setup Your Store</comment>
+  </data>
+  <data name="frmSubtype" xml:space="preserve">
+    <value>Sub Type</value>
+    <comment>Sub Type</comment>
+  </data>
+  <data name="frmTypes" xml:space="preserve">
+    <value>Type</value>
+    <comment>Type</comment>
+  </data>
+  <data name="frmUnitAssign" xml:space="preserve">
+    <value>Unit Assign</value>
+    <comment>Unit Assign</comment>
+  </data>
+  <data name="frmUnits" xml:space="preserve">
+    <value>Type</value>
+    <comment>Type</comment>
+  </data>
+  <data name="gPaymentBox" xml:space="preserve">
+    <value>Payment Box</value>
+    <comment>Payment Box</comment>
+  </data>
+  <data name="Grand_Total" xml:space="preserve">
+    <value>Grand Total</value>
+    <comment>Grand Total</comment>
+  </data>
+  <data name="Invoice_Date" xml:space="preserve">
+    <value>Invoice Date</value>
+    <comment>Invoice Date</comment>
+  </data>
+  <data name="Item_Amount" xml:space="preserve">
+    <value>Amount</value>
+    <comment>Amount</comment>
+  </data>
+  <data name="Item_Barcode" xml:space="preserve">
+    <value>Barcode</value>
+    <comment>Barcode</comment>
+  </data>
+  <data name="Item_Name" xml:space="preserve">
+    <value>Item Name</value>
+    <comment>Item Name</comment>
+  </data>
+  <data name="Item_Sale_Price" xml:space="preserve">
+    <value>Unit Price</value>
+    <comment>Unit Price</comment>
+  </data>
+  <data name="lblAddress" xml:space="preserve">
+    <value>Address:</value>
+    <comment>Address: </comment>
+  </data>
+  <data name="lblAssignSize" xml:space="preserve">
+    <value>Assign Size</value>
+    <comment>Assign Size</comment>
+  </data>
+  <data name="lblAssignUnit" xml:space="preserve">
+    <value>Assign Unit</value>
+    <comment>Assign Unit</comment>
+  </data>
+  <data name="lblBalance" xml:space="preserve">
+    <value>Balance:</value>
+    <comment>Balance: </comment>
+  </data>
+  <data name="lblBundlePrice" xml:space="preserve">
+    <value>Pack/Bundle Price:</value>
+    <comment>Pack/Bundle Price:</comment>
+  </data>
+  <data name="lblCardNo" xml:space="preserve">
+    <value>Cheque/Card No.:</value>
+    <comment>Cheque/Card No.</comment>
+  </data>
+  <data name="lblCategoryName" xml:space="preserve">
+    <value>Category Name:</value>
+    <comment>Category Name:</comment>
+  </data>
+  <data name="lblCellNo" xml:space="preserve">
+    <value>Cell Number</value>
+    <comment>Cell Number</comment>
+  </data>
+  <data name="lblCodeNo" xml:space="preserve">
+    <value>Code/Cell Number:</value>
+    <comment>Code/Cell Number:</comment>
+  </data>
+  <data name="lblContactNumber" xml:space="preserve">
+    <value>Contact Number:</value>
+    <comment>Contact Number:</comment>
+  </data>
+  <data name="lblCreateItems" xml:space="preserve">
+    <value>Create Items</value>
+    <comment>Create Items</comment>
+  </data>
+  <data name="lblCreateSize" xml:space="preserve">
+    <value>Create Size</value>
+    <comment>Create Size</comment>
+  </data>
+  <data name="lblCreateStore" xml:space="preserve">
+    <value>Create Store</value>
+    <comment>Create Store</comment>
+  </data>
+  <data name="lblCreateSubType" xml:space="preserve">
+    <value>Create SubTye</value>
+    <comment>Create SubType</comment>
+  </data>
+  <data name="lblCreateType" xml:space="preserve">
+    <value>Create Type</value>
+    <comment>Create Type</comment>
+  </data>
+  <data name="lblCreateUnit" xml:space="preserve">
+    <value>Create Unit</value>
+    <comment>Create Unit</comment>
+  </data>
+  <data name="lblCustomerBalance" xml:space="preserve">
+    <value>Customer Balance:</value>
+    <comment>Customer Balance:</comment>
+  </data>
+  <data name="lblCustomerId" xml:space="preserve">
+    <value>Customer ID:</value>
+    <comment>Customer ID:</comment>
+  </data>
+  <data name="lblCustomerName" xml:space="preserve">
+    <value>Customer Name:</value>
+    <comment>Customer Name:</comment>
+  </data>
+  <data name="lblCustomerType" xml:space="preserve">
+    <value>Customer Type:</value>
+    <comment>Customer Type:</comment>
+  </data>
+  <data name="lblDate" xml:space="preserve">
+    <value>Date:</value>
+    <comment>Date:</comment>
+  </data>
+  <data name="lblExpiryDate" xml:space="preserve">
+    <value>Expiry Date:</value>
+    <comment>Expiry Date:</comment>
+  </data>
+  <data name="lblFromDate" xml:space="preserve">
+    <value>From Date:</value>
+    <comment>From Date:</comment>
+  </data>
+  <data name="lblGrandAmount" xml:space="preserve">
+    <value>Grand Amount:</value>
+    <comment>Grand Amount:</comment>
+  </data>
+  <data name="lblInvoiceNumber" xml:space="preserve">
+    <value>Invoice Number:</value>
+    <comment>Invoice Number:</comment>
+  </data>
+  <data name="lblItemBarcode" xml:space="preserve">
+    <value>Item Barcode:</value>
+    <comment>Item Barcode:</comment>
+  </data>
+  <data name="lblItemID" xml:space="preserve">
+    <value>Item ID:</value>
+    <comment>Item ID: </comment>
+  </data>
+  <data name="lblItemName" xml:space="preserve">
+    <value>Item Name:</value>
+    <comment>Item Name:</comment>
+  </data>
+  <data name="lblItemSize" xml:space="preserve">
+    <value>Item Size:</value>
+    <comment>Item Size:</comment>
+  </data>
+  <data name="lblItemSubType" xml:space="preserve">
+    <value>Item SubType:</value>
+    <comment>Item SubType:</comment>
+  </data>
+  <data name="lblItemType" xml:space="preserve">
+    <value>Item Type:</value>
+    <comment>Item Type:</comment>
+  </data>
+  <data name="lblItemUnit" xml:space="preserve">
+    <value>Item Unit:</value>
+    <comment>Item Unit:</comment>
+  </data>
+  <data name="lblLocation" xml:space="preserve">
+    <value>Location:</value>
+    <comment>Location:</comment>
+  </data>
+  <data name="lblNameVendor" xml:space="preserve">
+    <value>Name Of Vendor</value>
+    <comment>Name Of Vendor</comment>
+  </data>
+  <data name="lblNetAmount" xml:space="preserve">
+    <value>Net Amount:</value>
+    <comment>Net Amount:</comment>
+  </data>
+  <data name="lblOwnerName" xml:space="preserve">
+    <value>Owner Name:</value>
+    <comment>Owner Name:</comment>
+  </data>
+  <data name="lblPaidAmount" xml:space="preserve">
+    <value>Paid Amount:</value>
+    <comment>Paid Amount:</comment>
+  </data>
+  <data name="lblPassword" xml:space="preserve">
+    <value>Password</value>
+    <comment>Password</comment>
+  </data>
+  <data name="lblPaymentType" xml:space="preserve">
+    <value>Payment Type:</value>
+    <comment>Payment Type:</comment>
+  </data>
+  <data name="lblPhoneNo" xml:space="preserve">
+    <value>Phone Number:</value>
+    <comment>Phone Number:</comment>
+  </data>
+  <data name="lblPieceInPack" xml:space="preserve">
+    <value>Piece in Pack:</value>
+    <comment>Piece in Pack:</comment>
+  </data>
+  <data name="lblPurchaseInvoiceNo" xml:space="preserve">
+    <value>Invoice Number:</value>
+    <comment>Invoice Number:</comment>
+  </data>
+  <data name="lblPurchasePrice" xml:space="preserve">
+    <value>Purchase Price:</value>
+    <comment>Purchase Price:</comment>
+  </data>
+  <data name="lblReceivedAmount" xml:space="preserve">
+    <value>Received Amount:</value>
+    <comment>Received Amount:</comment>
+  </data>
+  <data name="lblRegCustomerName" xml:space="preserve">
+    <value>Reg. Customer Name:</value>
+    <comment>Reg. Customer Name:</comment>
+  </data>
+  <data name="lblRegularCustomer" xml:space="preserve">
+    <value>Regular Customer</value>
+    <comment>Regular Customer</comment>
+  </data>
+  <data name="lblRegularVendor" xml:space="preserve">
+    <value>Regular Vendor</value>
+    <comment>Regular Vendor</comment>
+  </data>
+  <data name="lblSalesInvoice" xml:space="preserve">
+    <value>Sales Invoice</value>
+    <comment>Sales Invoice</comment>
+  </data>
+  <data name="lblScanBarcode" xml:space="preserve">
+    <value>Scan Barcode Here:</value>
+    <comment>Scan Barcode Here:</comment>
+  </data>
+  <data name="lblShopAmount" xml:space="preserve">
+    <value>Shop Amount:</value>
+    <comment>Shop Amount:</comment>
+  </data>
+  <data name="lblSizeID" xml:space="preserve">
+    <value>Size ID:</value>
+    <comment>Size ID:</comment>
+  </data>
+  <data name="lblSizeName" xml:space="preserve">
+    <value>Size Name:</value>
+    <comment>Size Name:</comment>
+  </data>
+  <data name="lblSPWOT" xml:space="preserve">
+    <value>Sales Price Without Tax:</value>
+    <comment>Sales Price Without Tax:</comment>
+  </data>
+  <data name="lblSPWT" xml:space="preserve">
+    <value>Sales Price With Tax:</value>
+    <comment>Sales Price With Tax:</comment>
+  </data>
+  <data name="lblStockCriticalLevel" xml:space="preserve">
+    <value>Stock Critical Level:</value>
+    <comment>Stock Critical Level:</comment>
+  </data>
+  <data name="lblStoreID" xml:space="preserve">
+    <value>Store ID:</value>
+    <comment>Store ID:</comment>
+  </data>
+  <data name="lblStoreLogo" xml:space="preserve">
+    <value>Store Logo</value>
+    <comment>Store Logo</comment>
+  </data>
+  <data name="lblStoreName" xml:space="preserve">
+    <value>Store Name:</value>
+    <comment>Store Name:</comment>
+  </data>
+  <data name="lblSubTypeID" xml:space="preserve">
+    <value>SubType ID:</value>
+    <comment>SubType ID:</comment>
+  </data>
+  <data name="lblSubTypeName" xml:space="preserve">
+    <value>SubTyp Name:</value>
+    <comment>Sub Type Name: </comment>
+  </data>
+  <data name="lblTax" xml:space="preserve">
+    <value>Tax %</value>
+    <comment>Tax %</comment>
+  </data>
+  <data name="lblTaxAmount" xml:space="preserve">
+    <value>Tax Amount:</value>
+    <comment>Tax Amount:</comment>
+  </data>
+  <data name="lblTaxNumber" xml:space="preserve">
+    <value>Tax Number:</value>
+    <comment>Tax Number: </comment>
+  </data>
+  <data name="lblToDate" xml:space="preserve">
+    <value>To Date:</value>
+    <comment>To Date:</comment>
+  </data>
+  <data name="lblTypeID" xml:space="preserve">
+    <value>Type ID:</value>
+    <comment>Type ID:</comment>
+  </data>
+  <data name="lblTypeName" xml:space="preserve">
+    <value>Type Name:</value>
+    <comment>TypeName:</comment>
+  </data>
+  <data name="lblUnitID" xml:space="preserve">
+    <value>Unit ID:</value>
+    <comment>Unit ID: </comment>
+  </data>
+  <data name="lblUnitName" xml:space="preserve">
+    <value>Unit Name:</value>
+    <comment>Unit Name: </comment>
+  </data>
+  <data name="lblUser" xml:space="preserve">
+    <value>User:</value>
+    <comment>User:</comment>
+  </data>
+  <data name="lblUsername" xml:space="preserve">
+    <value>Username</value>
+    <comment>Username</comment>
+  </data>
+  <data name="lblVendorBalance" xml:space="preserve">
+    <value>Vendor Balance:</value>
+    <comment>Vendor Balance:</comment>
+  </data>
+  <data name="lblVendorCode" xml:space="preserve">
+    <value>Vendor Code:</value>
+    <comment>Vendor Code:</comment>
+  </data>
+  <data name="lblVendorID" xml:space="preserve">
+    <value>Vendor ID:</value>
+    <comment>Vendor ID:</comment>
+  </data>
+  <data name="lblVendorName" xml:space="preserve">
+    <value>VEndor Name:</value>
+    <comment>Vendor Name:</comment>
+  </data>
+  <data name="PackPrice" xml:space="preserve">
+    <value>Pack Price</value>
+    <comment>Pack Price</comment>
+  </data>
+  <data name="Qty" xml:space="preserve">
+    <value>Quantity</value>
+    <comment>Quantity</comment>
+  </data>
+  <data name="Recievd_Amount" xml:space="preserve">
+    <value>Received Amount</value>
+    <comment>Received Amount</comment>
+  </data>
+  <data name="rp1" xml:space="preserve">
+    <value>General</value>
+    <comment>General</comment>
+  </data>
+  <data name="rp2" xml:space="preserve">
+    <value>Sales Invoices</value>
+    <comment>Sales Invoices</comment>
+  </data>
+  <data name="rp3" xml:space="preserve">
+    <value>Stock Management</value>
+    <comment>Stock Management</comment>
+  </data>
+  <data name="rp4" xml:space="preserve">
+    <value>Reports</value>
+    <comment>Reports</comment>
+  </data>
+  <data name="rpg1" xml:space="preserve">
+    <value>Security Control</value>
+    <comment>Security Control</comment>
+  </data>
+  <data name="rpg2" xml:space="preserve">
+    <value>General Setups</value>
+    <comment>General Setups</comment>
+  </data>
+  <data name="rpg3" xml:space="preserve">
+    <value>Items Management</value>
+    <comment>Items Management</comment>
+  </data>
+  <data name="rpg4" xml:space="preserve">
+    <value>Sales Invoice Process</value>
+    <comment>Sales Invoice Process</comment>
+  </data>
+  <data name="rpg5" xml:space="preserve">
+    <value>Stock Management</value>
+    <comment>Stock Management</comment>
+  </data>
+  <data name="rpg6" xml:space="preserve">
+    <value>Items Reports</value>
+    <comment>Items Reports</comment>
+  </data>
+  <data name="rpg7" xml:space="preserve">
+    <value>Sales Reports</value>
+    <comment>Sales Reports</comment>
+  </data>
+  <data name="rpg8" xml:space="preserve">
+    <value>Stock Reports</value>
+    <comment>Stock Reports</comment>
+  </data>
+  <data name="rppurchase" xml:space="preserve">
+    <value>Purchase Invoices</value>
+    <comment>Purchase Invoices</comment>
+  </data>
+  <data name="tabCustomer" xml:space="preserve">
+    <value>Add Customer</value>
+    <comment>Add Customer</comment>
+  </data>
+  <data name="tabStore" xml:space="preserve">
+    <value>Add Store</value>
+    <comment>Add Store</comment>
+  </data>
+  <data name="tabVendor" xml:space="preserve">
+    <value>Add Vendor</value>
+    <comment>Add Vendor</comment>
+  </data>
+  <data name="TPHistory" xml:space="preserve">
+    <value>History</value>
+    <comment>History</comment>
+  </data>
+  <data name="TPItems" xml:space="preserve">
+    <value>Add Items</value>
+    <comment>Add Items</comment>
+  </data>
+  <data name="TPPurchaseInvoice" xml:space="preserve">
+    <value>Purchase Invoice</value>
+    <comment>Purchase Invoice</comment>
+  </data>
+  <data name="TPSize" xml:space="preserve">
+    <value>Add Size</value>
+    <comment>Add Size</comment>
+  </data>
+  <data name="TPSubType" xml:space="preserve">
+    <value>Add SubType</value>
+    <comment>Add SubType</comment>
+  </data>
+  <data name="TPTodaySale" xml:space="preserve">
+    <value>Today Sale</value>
+    <comment>Today Sale</comment>
+  </data>
+  <data name="TPType" xml:space="preserve">
+    <value>Add Type</value>
+    <comment>Add Type</comment>
+  </data>
+  <data name="TPUnit" xml:space="preserve">
+    <value>Add Unit</value>
+    <comment>Add Unit</comment>
+  </data>
+  <data name="TxtCR_Number" xml:space="preserve">
+    <value>CR Number</value>
+    <comment>CR Number</comment>
+  </data>
+</root>

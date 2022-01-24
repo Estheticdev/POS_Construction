@@ -1,0 +1,752 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="brnSaleDetail" xml:space="preserve">
+    <value>تفاصيل المبيعات</value>
+    <comment>Sales Detail</comment>
+  </data>
+  <data name="BtnAdd" xml:space="preserve">
+    <value>إضافة</value>
+    <comment>Add</comment>
+  </data>
+  <data name="btnAddCustomer" xml:space="preserve">
+    <value>إضافة الزبون</value>
+    <comment>Add Customer</comment>
+  </data>
+  <data name="btnAddVendor" xml:space="preserve">
+    <value>إضافة مندوب</value>
+    <comment>Add Vendor</comment>
+  </data>
+  <data name="BtnAssignUnits" xml:space="preserve">
+    <value>تعيين الوحدة</value>
+    <comment>Unit Assign</comment>
+  </data>
+  <data name="btnBetween" xml:space="preserve">
+    <value>بين</value>
+    <comment>Between</comment>
+  </data>
+  <data name="BtnCancel" xml:space="preserve">
+    <value>يلغي</value>
+    <comment>Cancel</comment>
+  </data>
+  <data name="btnClear" xml:space="preserve">
+    <value>واضح</value>
+    <comment>Clear</comment>
+  </data>
+  <data name="btnCreateStore" xml:space="preserve">
+    <value>قم بإعداد متجرك</value>
+    <comment>Setup Your Store</comment>
+  </data>
+  <data name="btnCreateUser" xml:space="preserve">
+    <value>إنشاء المستخدم</value>
+    <comment>Create User</comment>
+  </data>
+  <data name="BtnDelete" xml:space="preserve">
+    <value>حذف</value>
+    <comment>Delete</comment>
+  </data>
+  <data name="BtnEdit" xml:space="preserve">
+    <value>يحرر</value>
+    <comment>Edit</comment>
+  </data>
+  <data name="btnExit" xml:space="preserve">
+    <value>مخرج</value>
+    <comment>Exit</comment>
+  </data>
+  <data name="btnFind" xml:space="preserve">
+    <value>تجد</value>
+    <comment>Find</comment>
+  </data>
+  <data name="btnInvoiceDetail" xml:space="preserve">
+    <value>تفاصيل الفاتورة</value>
+    <comment>Invoice Detail</comment>
+  </data>
+  <data name="btnItemsBarcode" xml:space="preserve">
+    <value>عناصر الباركود</value>
+    <comment>Items Barcode</comment>
+  </data>
+  <data name="btnItemsCategory" xml:space="preserve">
+    <value>النوع الفرعي للعناصر</value>
+    <comment>Items Sub Type</comment>
+  </data>
+  <data name="btnItemsdefinition" xml:space="preserve">
+    <value>تعريف العناصر</value>
+    <comment>Items Definition</comment>
+  </data>
+  <data name="btnItemsSize" xml:space="preserve">
+    <value>تحديد حجم العنصر</value>
+    <comment>Define Item Size</comment>
+  </data>
+  <data name="btnItemsType" xml:space="preserve">
+    <value>تحديد نوع العناصر</value>
+    <comment>Define Items Type</comment>
+  </data>
+  <data name="btnItemsUnit" xml:space="preserve">
+    <value>تعريف وحدة العناصر</value>
+    <comment>Define Items Unit</comment>
+  </data>
+  <data name="BtnLogin" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+    <comment>Login</comment>
+  </data>
+  <data name="BtnNew" xml:space="preserve">
+    <value>جديد</value>
+    <comment>New</comment>
+  </data>
+  <data name="btnRptItemsDetail" xml:space="preserve">
+    <value>تفاصيل العناصر</value>
+    <comment>Item Detail</comment>
+  </data>
+  <data name="btnSales" xml:space="preserve">
+    <value>فاتورة بيع جديدة</value>
+    <comment>New Sale Invoice</comment>
+  </data>
+  <data name="btnSalesReturns" xml:space="preserve">
+    <value>إرجاع فاتورة المبيعات</value>
+    <comment>Sales Invoice Return</comment>
+  </data>
+  <data name="BtnSave" xml:space="preserve">
+    <value>حفظ</value>
+    <comment>Save</comment>
+  </data>
+  <data name="BtnSearch" xml:space="preserve">
+    <value>بحث</value>
+    <comment>Search</comment>
+  </data>
+  <data name="btnSizeAssign" xml:space="preserve">
+    <value>تعيين الحجم</value>
+    <comment>Size Assign</comment>
+  </data>
+  <data name="BtnStock" xml:space="preserve">
+    <value>إدارة مخزونك</value>
+    <comment>Manage Your Stock</comment>
+  </data>
+  <data name="btnStockDetail" xml:space="preserve">
+    <value>تفاصيل المخزون</value>
+    <comment>Stock Detail</comment>
+  </data>
+  <data name="btnStockInDetail" xml:space="preserve">
+    <value>مخزون بالتفصيل</value>
+    <comment>Stock in Detail</comment>
+  </data>
+  <data name="btnStockOutDetail" xml:space="preserve">
+    <value>مخزون من التفاصيل</value>
+    <comment>Stock Out Detail</comment>
+  </data>
+  <data name="btnToday" xml:space="preserve">
+    <value>اليوم</value>
+    <comment>Today</comment>
+  </data>
+  <data name="btnUserRole" xml:space="preserve">
+    <value>تحديد دور المستخدم</value>
+    <comment>Define User Role</comment>
+  </data>
+  <data name="btnYesterday" xml:space="preserve">
+    <value>امس</value>
+    <comment>Yesterday</comment>
+  </data>
+  <data name="CkEActive" xml:space="preserve">
+    <value>نشيط</value>
+    <comment>Active</comment>
+  </data>
+  <data name="CkEIsPacked" xml:space="preserve">
+    <value>معباه</value>
+    <comment>Packed</comment>
+  </data>
+  <data name="Created_By" xml:space="preserve">
+    <value>انشأ من قبل</value>
+    <comment>Created By</comment>
+  </data>
+  <data name="frmCustomerDeffination" xml:space="preserve">
+    <value>تعريف العميل</value>
+    <comment>Customer Definition</comment>
+  </data>
+  <data name="frmItems_Deffination" xml:space="preserve">
+    <value>تعريف الصنف</value>
+    <comment>Items Definition</comment>
+  </data>
+  <data name="frmPurchaseInvoices" xml:space="preserve">
+    <value>فاتورة الشراء</value>
+    <comment>Purchase Invoice</comment>
+  </data>
+  <data name="frmSalesInvoices" xml:space="preserve">
+    <value>فاتورة البيع</value>
+    <comment>Sales Invoice</comment>
+  </data>
+  <data name="frmSizAssigns" xml:space="preserve">
+    <value>تعيين الحجم</value>
+    <comment>Assign Size</comment>
+  </data>
+  <data name="frmStore_Deffination" xml:space="preserve">
+    <value>قم بإعداد متجرك</value>
+    <comment>Setup Your Store</comment>
+  </data>
+  <data name="frmSubtype" xml:space="preserve">
+    <value>النوع الفرعي</value>
+    <comment>Sub Type</comment>
+  </data>
+  <data name="frmTypes" xml:space="preserve">
+    <value>نوع</value>
+    <comment>Type</comment>
+  </data>
+  <data name="frmUnitAssign" xml:space="preserve">
+    <value>تعيين الوحدة</value>
+    <comment>Unit Assign</comment>
+  </data>
+  <data name="frmUnits" xml:space="preserve">
+    <value>نوع</value>
+    <comment>Type</comment>
+  </data>
+  <data name="gPaymentBox" xml:space="preserve">
+    <value>صندوق الدفع</value>
+    <comment>Payment Box</comment>
+  </data>
+  <data name="Grand_Total" xml:space="preserve">
+    <value>المبلغ الإجمالي</value>
+    <comment>Grand Total</comment>
+  </data>
+  <data name="Invoice_Date" xml:space="preserve">
+    <value>تاريخ الفاتورة</value>
+    <comment>Invoice Date</comment>
+  </data>
+  <data name="Item_Amount" xml:space="preserve">
+    <value>كمية</value>
+    <comment>Amount</comment>
+  </data>
+  <data name="Item_Barcode" xml:space="preserve">
+    <value>باركود</value>
+    <comment>Barcode</comment>
+  </data>
+  <data name="Item_Name" xml:space="preserve">
+    <value>اسم الصنف</value>
+    <comment>Item Name</comment>
+  </data>
+  <data name="Item_Sale_Price" xml:space="preserve">
+    <value>سعر الوحدة</value>
+    <comment>Unit Price</comment>
+  </data>
+  <data name="lblAddress" xml:space="preserve">
+    <value>العنوان</value>
+    <comment>Address: </comment>
+  </data>
+  <data name="lblAssignSize" xml:space="preserve">
+    <value>تعيين الحجم</value>
+    <comment>Assign Size</comment>
+  </data>
+  <data name="lblAssignUnit" xml:space="preserve">
+    <value>وحدة التخصيص</value>
+    <comment>Assign Unit</comment>
+  </data>
+  <data name="lblBalance" xml:space="preserve">
+    <value>الرصيد</value>
+    <comment>Balance: </comment>
+  </data>
+  <data name="lblBundlePrice" xml:space="preserve">
+    <value>سعر الباقة / الباقة:</value>
+    <comment>Pack/Bundle Price:</comment>
+  </data>
+  <data name="lblCardNo" xml:space="preserve">
+    <value>رقم الشيك / البطاقة</value>
+    <comment>Cheque/Card No.</comment>
+  </data>
+  <data name="lblCategoryName" xml:space="preserve">
+    <value>اسم التصنيف</value>
+    <comment>Category Name:</comment>
+  </data>
+  <data name="lblCellNo" xml:space="preserve">
+    <value>رقم الخلوي</value>
+    <comment>Cell Number</comment>
+  </data>
+  <data name="lblCodeNo" xml:space="preserve">
+    <value>رقم الجوال</value>
+    <comment>Code/Cell Number:</comment>
+  </data>
+  <data name="lblContactNumber" xml:space="preserve">
+    <value>رقم الزبون</value>
+    <comment>Contact Number:</comment>
+  </data>
+  <data name="lblCreateItems" xml:space="preserve">
+    <value>إنشاء العناصر</value>
+    <comment>Create Items</comment>
+  </data>
+  <data name="lblCreateSize" xml:space="preserve">
+    <value>إنشاء الحجم</value>
+    <comment>Create Size</comment>
+  </data>
+  <data name="lblCreateStore" xml:space="preserve">
+    <value>إنشاء متجر</value>
+    <comment>Create Store</comment>
+  </data>
+  <data name="lblCreateSubType" xml:space="preserve">
+    <value>إنشاء نوع فرعي</value>
+    <comment>Create SubType</comment>
+  </data>
+  <data name="lblCreateType" xml:space="preserve">
+    <value>إنشاء نوع</value>
+    <comment>Create Type</comment>
+  </data>
+  <data name="lblCreateUnit" xml:space="preserve">
+    <value>إنشاء وحدة</value>
+    <comment>Create Unit</comment>
+  </data>
+  <data name="lblCustomerBalance" xml:space="preserve">
+    <value>رصيد العميل:</value>
+    <comment>Customer Balance:</comment>
+  </data>
+  <data name="lblCustomerId" xml:space="preserve">
+    <value>هوية العميل:</value>
+    <comment>Customer ID:</comment>
+  </data>
+  <data name="lblCustomerName" xml:space="preserve">
+    <value>اسم العميل</value>
+    <comment>Customer Name:</comment>
+  </data>
+  <data name="lblCustomerType" xml:space="preserve">
+    <value>نوع العميل</value>
+    <comment>Customer Type:</comment>
+  </data>
+  <data name="lblDate" xml:space="preserve">
+    <value>التاريخ</value>
+    <comment>Date:</comment>
+  </data>
+  <data name="lblExpiryDate" xml:space="preserve">
+    <value>تاريخ انتهاء</value>
+    <comment>Expiry Date:</comment>
+  </data>
+  <data name="lblFromDate" xml:space="preserve">
+    <value>من التاريخ:</value>
+    <comment>From Date:</comment>
+  </data>
+  <data name="lblGrandAmount" xml:space="preserve">
+    <value>المبلغ الاجمالي</value>
+    <comment>Grand Amount:</comment>
+  </data>
+  <data name="lblInvoiceNumber" xml:space="preserve">
+    <value>رقم الفاتوره</value>
+    <comment>Invoice Number:</comment>
+  </data>
+  <data name="lblItemBarcode" xml:space="preserve">
+    <value>صنف باركود</value>
+    <comment>Item Barcode:</comment>
+  </data>
+  <data name="lblItemID" xml:space="preserve">
+    <value>نوع الصنف</value>
+    <comment>Item ID: </comment>
+  </data>
+  <data name="lblItemName" xml:space="preserve">
+    <value>اسم الصنف</value>
+    <comment>Item Name:</comment>
+  </data>
+  <data name="lblItemSize" xml:space="preserve">
+    <value>حجم الصنف</value>
+    <comment>Item Size:</comment>
+  </data>
+  <data name="lblItemSubType" xml:space="preserve">
+    <value>نوع العنصر الفرعي</value>
+    <comment>Item SubType:</comment>
+  </data>
+  <data name="lblItemType" xml:space="preserve">
+    <value>نوع العنصر</value>
+    <comment>Item Type:</comment>
+  </data>
+  <data name="lblItemUnit" xml:space="preserve">
+    <value>وحدة البند</value>
+    <comment>Item Unit:</comment>
+  </data>
+  <data name="lblLocation" xml:space="preserve">
+    <value>موقع</value>
+    <comment>Location:</comment>
+  </data>
+  <data name="lblNameVendor" xml:space="preserve">
+    <value>اسم المندوب</value>
+    <comment>Name Of Vendor</comment>
+  </data>
+  <data name="lblNetAmount" xml:space="preserve">
+    <value>المبلغ الصافي</value>
+    <comment>Net Amount:</comment>
+  </data>
+  <data name="lblOwnerName" xml:space="preserve">
+    <value>اسم المالك</value>
+    <comment>Owner Name:</comment>
+  </data>
+  <data name="lblPaidAmount" xml:space="preserve">
+    <value>المبلغ المدفوع</value>
+    <comment>Paid Amount:</comment>
+  </data>
+  <data name="lblPassword" xml:space="preserve">
+    <value>كلمه السر</value>
+    <comment>Password</comment>
+  </data>
+  <data name="lblPaymentType" xml:space="preserve">
+    <value>نوع الدفع</value>
+    <comment>Payment Type:</comment>
+  </data>
+  <data name="lblPhoneNo" xml:space="preserve">
+    <value>رقم الهاتف</value>
+    <comment>Phone Number:</comment>
+  </data>
+  <data name="lblPieceInPack" xml:space="preserve">
+    <value>قطعة في حزمة:</value>
+    <comment>Piece in Pack:</comment>
+  </data>
+  <data name="lblPurchaseInvoiceNo" xml:space="preserve">
+    <value>رقم الفاتوره</value>
+    <comment>Invoice Number:</comment>
+  </data>
+  <data name="lblPurchasePrice" xml:space="preserve">
+    <value>سعر الشراء</value>
+    <comment>Purchase Price:</comment>
+  </data>
+  <data name="lblReceivedAmount" xml:space="preserve">
+    <value>المبلغ الذي تسلمه:</value>
+    <comment>Received Amount:</comment>
+  </data>
+  <data name="lblRegCustomerName" xml:space="preserve">
+    <value>ريج. اسم العميل:</value>
+    <comment>Reg. Customer Name:</comment>
+  </data>
+  <data name="lblRegularCustomer" xml:space="preserve">
+    <value>العميل منتظم</value>
+    <comment>Regular Customer</comment>
+  </data>
+  <data name="lblRegularVendor" xml:space="preserve">
+    <value>المندوب منتظم</value>
+    <comment>Regular Vendor</comment>
+  </data>
+  <data name="lblSalesInvoice" xml:space="preserve">
+    <value>فاتورة المبيعات</value>
+    <comment>Sales Invoice</comment>
+  </data>
+  <data name="lblScanBarcode" xml:space="preserve">
+    <value>مسح الباركود هنا</value>
+    <comment>Scan Barcode Here:</comment>
+  </data>
+  <data name="lblShopAmount" xml:space="preserve">
+    <value>مبلغ المحل:</value>
+    <comment>Shop Amount:</comment>
+  </data>
+  <data name="lblSizeID" xml:space="preserve">
+    <value>معرف الحجم</value>
+    <comment>Size ID:</comment>
+  </data>
+  <data name="lblSizeName" xml:space="preserve">
+    <value>اسم الحجم</value>
+    <comment>Size Name:</comment>
+  </data>
+  <data name="lblSPWOT" xml:space="preserve">
+    <value>سعر البيع بدون ضريبة</value>
+    <comment>Sales Price Without Tax:</comment>
+  </data>
+  <data name="lblSPWT" xml:space="preserve">
+    <value>سعر البيع مع الضريبة</value>
+    <comment>Sales Price With Tax:</comment>
+  </data>
+  <data name="lblStockCriticalLevel" xml:space="preserve">
+    <value>المستوى الحرج للمخزون:</value>
+    <comment>Stock Critical Level:</comment>
+  </data>
+  <data name="lblStoreID" xml:space="preserve">
+    <value>معرف المتجر</value>
+    <comment>Store ID:</comment>
+  </data>
+  <data name="lblStoreLogo" xml:space="preserve">
+    <value>شعار المتجر</value>
+    <comment>Store Logo</comment>
+  </data>
+  <data name="lblStoreName" xml:space="preserve">
+    <value>اسم المتجر</value>
+    <comment>Store Name:</comment>
+  </data>
+  <data name="lblSubTypeID" xml:space="preserve">
+    <value>معرف النوع الفرعي</value>
+    <comment>SubType ID:</comment>
+  </data>
+  <data name="lblSubTypeName" xml:space="preserve">
+    <value>اسم النوع الفرعي</value>
+    <comment>Sub Type Name: </comment>
+  </data>
+  <data name="lblTax" xml:space="preserve">
+    <value>٪ الضريبة</value>
+    <comment>Tax %</comment>
+  </data>
+  <data name="lblTaxAmount" xml:space="preserve">
+    <value>قيمة الضريبة:</value>
+    <comment>Tax Amount:</comment>
+  </data>
+  <data name="lblTaxNumber" xml:space="preserve">
+    <value>قيمة الضريبة:</value>
+    <comment>Tax Number: </comment>
+  </data>
+  <data name="lblToDate" xml:space="preserve">
+    <value>حتى الآن:</value>
+    <comment>To Date:</comment>
+  </data>
+  <data name="lblTypeID" xml:space="preserve">
+    <value>اكتب معرف</value>
+    <comment>Type ID:</comment>
+  </data>
+  <data name="lblTypeName" xml:space="preserve">
+    <value>اسم نوع</value>
+    <comment>TypeName:</comment>
+  </data>
+  <data name="lblUnitID" xml:space="preserve">
+    <value>معرف الوحدة</value>
+    <comment>Unit ID: </comment>
+  </data>
+  <data name="lblUnitName" xml:space="preserve">
+    <value>إسم الوحدة</value>
+    <comment>Unit Name: </comment>
+  </data>
+  <data name="lblUser" xml:space="preserve">
+    <value>مستخدم:</value>
+    <comment>User:</comment>
+  </data>
+  <data name="lblUsername" xml:space="preserve">
+    <value>اسم االمستخدم</value>
+    <comment>Username</comment>
+  </data>
+  <data name="lblVendorBalance" xml:space="preserve">
+    <value>رصيد المندوب:</value>
+    <comment>Vendor Balance:</comment>
+  </data>
+  <data name="lblVendorCode" xml:space="preserve">
+    <value>رمز البائع</value>
+    <comment>Vendor Code:</comment>
+  </data>
+  <data name="lblVendorID" xml:space="preserve">
+    <value>معرف البائع</value>
+    <comment>Vendor ID:</comment>
+  </data>
+  <data name="lblVendorName" xml:space="preserve">
+    <value>اسم المندوب</value>
+    <comment>Vendor Name:</comment>
+  </data>
+  <data name="PackPrice" xml:space="preserve">
+    <value>سعر الباقة</value>
+    <comment>Pack Price</comment>
+  </data>
+  <data name="Qty" xml:space="preserve">
+    <value>عدد</value>
+    <comment>Quantity</comment>
+  </data>
+  <data name="Recievd_Amount" xml:space="preserve">
+    <value>المبلغ الذي تسلمه</value>
+    <comment>Received Amount</comment>
+  </data>
+  <data name="rp1" xml:space="preserve">
+    <value>عام</value>
+    <comment>General</comment>
+  </data>
+  <data name="rp2" xml:space="preserve">
+    <value>فواتير المبيعات</value>
+    <comment>Sales Invoices</comment>
+  </data>
+  <data name="rp3" xml:space="preserve">
+    <value>إدارة المخزون</value>
+    <comment>Stock Management</comment>
+  </data>
+  <data name="rp4" xml:space="preserve">
+    <value>التقارير</value>
+    <comment>Reports</comment>
+  </data>
+  <data name="rpg1" xml:space="preserve">
+    <value>السيطرة الامنية</value>
+    <comment>Security Control</comment>
+  </data>
+  <data name="rpg2" xml:space="preserve">
+    <value>الاجهزة العامة</value>
+    <comment>General Setups</comment>
+  </data>
+  <data name="rpg3" xml:space="preserve">
+    <value>إدارة الأصناف</value>
+    <comment>Items Management</comment>
+  </data>
+  <data name="rpg4" xml:space="preserve">
+    <value>عملية فاتورة المبيعات</value>
+    <comment>Sales Invoice Process</comment>
+  </data>
+  <data name="rpg5" xml:space="preserve">
+    <value>إدارة المخزون</value>
+    <comment>Stock Management</comment>
+  </data>
+  <data name="rpg6" xml:space="preserve">
+    <value>تقارير الأصناف</value>
+    <comment>Items Reports</comment>
+  </data>
+  <data name="rpg7" xml:space="preserve">
+    <value>تقرير المبيعات</value>
+    <comment>Sales Reports</comment>
+  </data>
+  <data name="rpg8" xml:space="preserve">
+    <value>تقارير المخزون</value>
+    <comment>Stock Reports</comment>
+  </data>
+  <data name="rppurchase" xml:space="preserve">
+    <value>فواتير الشراء</value>
+    <comment>Purchase Invoices</comment>
+  </data>
+  <data name="tabCustomer" xml:space="preserve">
+    <value>أضف العميل</value>
+    <comment>Add Customer</comment>
+  </data>
+  <data name="tabStore" xml:space="preserve">
+    <value>أضف المتجر</value>
+    <comment>Add Store</comment>
+  </data>
+  <data name="tabVendor" xml:space="preserve">
+    <value>أضف المندوب</value>
+    <comment>Add Vendor</comment>
+  </data>
+  <data name="TPHistory" xml:space="preserve">
+    <value>تاريخ</value>
+    <comment>History</comment>
+  </data>
+  <data name="TPItems" xml:space="preserve">
+    <value>أضف اصنف</value>
+    <comment>Add Items</comment>
+  </data>
+  <data name="TPPurchaseInvoice" xml:space="preserve">
+    <value>فاتورة المشتريات</value>
+    <comment>Purchase Invoice</comment>
+  </data>
+  <data name="TPSize" xml:space="preserve">
+    <value>إضافة الحجم</value>
+    <comment>Add Size</comment>
+  </data>
+  <data name="TPSubType" xml:space="preserve">
+    <value>النوع الفرعي</value>
+    <comment>Add SubType</comment>
+  </data>
+  <data name="TPTodaySale" xml:space="preserve">
+    <value>اليوم بيع</value>
+    <comment>Today Sale</comment>
+  </data>
+  <data name="TPType" xml:space="preserve">
+    <value>إضافة نوع</value>
+    <comment>Add Type</comment>
+  </data>
+  <data name="TPUnit" xml:space="preserve">
+    <value>إضافة وحدة</value>
+    <comment>Add Unit</comment>
+  </data>
+  <data name="TxtCR_Number" xml:space="preserve">
+    <value>س ر</value>
+    <comment>CR Number</comment>
+  </data>
+</root>
