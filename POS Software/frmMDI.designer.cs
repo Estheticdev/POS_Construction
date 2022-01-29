@@ -78,6 +78,8 @@
             this.rpg7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpg8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.BarEmpName = new DevExpress.XtraBars.BarStaticItem();
             this.BarLoginAt = new DevExpress.XtraBars.BarStaticItem();
@@ -554,8 +556,6 @@
             this.barButtonItem79 = new DevExpress.XtraBars.BarButtonItem();
             this.printPreviewStaticItem2 = new DevExpress.XtraPrinting.Preview.PrintPreviewStaticItem();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rlueLanguage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TabActiveForm)).BeginInit();
@@ -700,7 +700,7 @@
             // 
             // btnSales
             // 
-            this.btnSales.Caption = "New Sale Invoice";
+            this.btnSales.Caption = "New Invoice";
             this.btnSales.Id = 11;
             this.btnSales.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSales.ImageOptions.Image")));
             this.btnSales.ImageOptions.LargeImage = global::POS_Software.Properties.Resources.icon_image;
@@ -945,7 +945,7 @@
             this.rpg3,
             this.rpg4});
             this.rp2.Name = "rp2";
-            this.rp2.Text = "Sales Invoices";
+            this.rp2.Text = "Invoices";
             // 
             // rpg3
             // 
@@ -1030,6 +1030,19 @@
             // 
             this.ribbonPageGroup2.ItemLinks.Add(this.bbtnVATReport);
             this.ribbonPageGroup2.Name = "ribbonPageGroup2";
+            // 
+            // ribbonPage1
+            // 
+            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup3});
+            this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "ribbonPage1";
+            this.ribbonPage1.Visible = false;
+            // 
+            // ribbonPageGroup3
+            // 
+            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
+            this.ribbonPageGroup3.Text = "ribbonPageGroup3";
             // 
             // ribbonStatusBar1
             // 
@@ -4760,18 +4773,6 @@
             this.ribbonPage2.Name = "ribbonPage2";
             this.ribbonPage2.Text = "ribbonPage2";
             // 
-            // ribbonPage1
-            // 
-            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup3});
-            this.ribbonPage1.Name = "ribbonPage1";
-            this.ribbonPage1.Text = "ribbonPage1";
-            // 
-            // ribbonPageGroup3
-            // 
-            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "ribbonPageGroup3";
-            // 
             // frmMDI
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
@@ -4779,6 +4780,8 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Zoom;
+            this.BackgroundImageStore = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImageStore")));
             this.ClientSize = new System.Drawing.Size(1353, 787);
             this.Controls.Add(this.TabActiveForm);
             this.Controls.Add(this.ribbonStatusBar1);

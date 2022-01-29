@@ -46,6 +46,7 @@
             this.Item_Barcode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Item_Name = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Unit_Price = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.RPTUnitPrice = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.Pack_Price = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Qty = new DevExpress.XtraGrid.Columns.GridColumn();
             this.RepTxtQty = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
@@ -103,9 +104,9 @@
             this.DtEInvoiceDate = new DevExpress.XtraEditors.DateEdit();
             this.TxtInvoiceNumber = new DevExpress.XtraEditors.TextEdit();
             this.ErPro = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.RPTUnitPrice = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RPTUnitPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RepTxtQty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CkEDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LuEItem_ID)).BeginInit();
@@ -131,7 +132,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DtEInvoiceDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtInvoiceNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErPro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RPTUnitPrice)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
@@ -253,6 +253,12 @@
             this.Unit_Price.OptionsColumn.FixedWidth = true;
             this.Unit_Price.Visible = true;
             this.Unit_Price.VisibleIndex = 2;
+            // 
+            // RPTUnitPrice
+            // 
+            this.RPTUnitPrice.AutoHeight = false;
+            this.RPTUnitPrice.Name = "RPTUnitPrice";
+            this.RPTUnitPrice.Leave += new System.EventHandler(this.RPTUnitPrice_Leave);
             // 
             // Pack_Price
             // 
@@ -972,12 +978,6 @@
             // 
             this.ErPro.ContainerControl = this;
             // 
-            // RPTUnitPrice
-            // 
-            this.RPTUnitPrice.AutoHeight = false;
-            this.RPTUnitPrice.Name = "RPTUnitPrice";
-            this.RPTUnitPrice.Leave += new System.EventHandler(this.RPTUnitPrice_Leave);
-            // 
             // frmSalesReturns
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -994,6 +994,7 @@
             this.Load += new System.EventHandler(this.frmSalesInvoices_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RPTUnitPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RepTxtQty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CkEDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LuEItem_ID)).EndInit();
@@ -1022,7 +1023,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DtEInvoiceDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtInvoiceNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErPro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RPTUnitPrice)).EndInit();
             this.ResumeLayout(false);
 
         }

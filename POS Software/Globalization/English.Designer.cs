@@ -277,7 +277,7 @@ namespace POS_Software.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New Sale Invoice.
+        ///   Looks up a localized string similar to New Invoice.
         /// </summary>
         internal static string btnSales {
             get {
@@ -408,6 +408,15 @@ namespace POS_Software.Globalization {
         internal static string Created_By {
             get {
                 return ResourceManager.GetString("Created_By", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Custom_Size.
+        /// </summary>
+        internal static string Custom_Size {
+            get {
+                return ResourceManager.GetString("Custom_Size", resourceCulture);
             }
         }
         
@@ -777,6 +786,15 @@ namespace POS_Software.Globalization {
         internal static string lblGrandAmount {
             get {
                 return ResourceManager.GetString("lblGrandAmount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guarantee.
+        /// </summary>
+        internal static string lblgurrentee {
+            get {
+                return ResourceManager.GetString("lblgurrentee", resourceCulture);
             }
         }
         
@@ -1240,6 +1258,24 @@ namespace POS_Software.Globalization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Percentage.
+        /// </summary>
+        internal static string Percentage {
+            get {
+                return ResourceManager.GetString("Percentage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Percentage_Amount.
+        /// </summary>
+        internal static string Percentage_Amount {
+            get {
+                return ResourceManager.GetString("Percentage_Amount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Quantity.
         /// </summary>
         internal static string Qty {
@@ -1267,7 +1303,7 @@ namespace POS_Software.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sales Invoices.
+        ///   Looks up a localized string similar to Invoices.
         /// </summary>
         internal static string rp2 {
             get {

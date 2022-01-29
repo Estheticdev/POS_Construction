@@ -214,7 +214,7 @@
     <comment>Item Detail</comment>
   </data>
   <data name="btnSales" xml:space="preserve">
-    <value>فاتورة بيع جديدة</value>
+    <value>فاتورة أعمال</value>
     <comment>New Sale Invoice</comment>
   </data>
   <data name="btnSalesReturns" xml:space="preserve">
@@ -272,6 +272,10 @@
   <data name="Created_By" xml:space="preserve">
     <value>انشأ من قبل</value>
     <comment>Created By</comment>
+  </data>
+  <data name="Custom_Size" xml:space="preserve">
+    <value>الوحدة</value>
+    <comment>Custom Size used in sale invoice</comment>
   </data>
   <data name="frmCustomerDeffination" xml:space="preserve">
     <value>تعريف العميل</value>
@@ -436,6 +440,10 @@
   <data name="lblGrandAmount" xml:space="preserve">
     <value>المبلغ الاجمالي</value>
     <comment>Grand Amount:</comment>
+  </data>
+  <data name="lblgurrentee" xml:space="preserve">
+    <value>ضمان أعمال</value>
+    <comment>lblgurrentee</comment>
   </data>
   <data name="lblInvoiceNumber" xml:space="preserve">
     <value>رقم الفاتوره</value>
@@ -626,11 +634,11 @@
     <comment>Vendor Balance:</comment>
   </data>
   <data name="lblVendorCode" xml:space="preserve">
-    <value>رمز البائع</value>
+    <value>رمز أعمال</value>
     <comment>Vendor Code:</comment>
   </data>
   <data name="lblVendorID" xml:space="preserve">
-    <value>معرف البائع</value>
+    <value>معرف أعمال</value>
     <comment>Vendor ID:</comment>
   </data>
   <data name="lblVendorName" xml:space="preserve">
@@ -640,6 +648,14 @@
   <data name="PackPrice" xml:space="preserve">
     <value>سعر الباقة</value>
     <comment>Pack Price</comment>
+  </data>
+  <data name="Percentage" xml:space="preserve">
+    <value>%</value>
+    <comment>in sale invoice</comment>
+  </data>
+  <data name="Percentage_Amount" xml:space="preserve">
+    <value>الأجمالي</value>
+    <comment>used in Sale invoice</comment>
   </data>
   <data name="Qty" xml:space="preserve">
     <value>عدد</value>
@@ -654,7 +670,7 @@
     <comment>General</comment>
   </data>
   <data name="rp2" xml:space="preserve">
-    <value>فواتير المبيعات</value>
+    <value>فواتير</value>
     <comment>Sales Invoices</comment>
   </data>
   <data name="rp3" xml:space="preserve">

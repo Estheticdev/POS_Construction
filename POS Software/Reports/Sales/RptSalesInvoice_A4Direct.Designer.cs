@@ -34,9 +34,12 @@
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
             this.ldbarcode = new DevExpress.XtraReports.UI.XRTableCell();
             this.ldProduct = new DevExpress.XtraReports.UI.XRTableCell();
+            this.ldcustomv = new DevExpress.XtraReports.UI.XRTableCell();
             this.ldunitPrice = new DevExpress.XtraReports.UI.XRTableCell();
             this.ldQty = new DevExpress.XtraReports.UI.XRTableCell();
             this.ldAmount = new DevExpress.XtraReports.UI.XRTableCell();
+            this.ldpercentage = new DevExpress.XtraReports.UI.XRTableCell();
+            this.ldafterpercentage = new DevExpress.XtraReports.UI.XRTableCell();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
@@ -49,11 +52,14 @@
             this.xrTableRow44 = new DevExpress.XtraReports.UI.XRTableRow();
             this.LblVendorName = new DevExpress.XtraReports.UI.XRTableCell();
             this.GroupHeader1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
+            this.xrarabic = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrpercentage = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrafterpercentage = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrcustomV = new DevExpress.XtraReports.UI.XRLabel();
             this.lblTaxableInvoice = new DevExpress.XtraReports.UI.XRLabel();
             this.xrcc1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrcc2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrlocation = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrPanel2 = new DevExpress.XtraReports.UI.XRPanel();
             this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.lblDate = new DevExpress.XtraReports.UI.XRLabel();
             this.ldInvoiceNo = new DevExpress.XtraReports.UI.XRLabel();
@@ -134,7 +140,7 @@
             this.xrTable1.Name = "xrTable1";
             this.xrTable1.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow1});
-            this.xrTable1.SizeF = new System.Drawing.SizeF(758.4169F, 25F);
+            this.xrTable1.SizeF = new System.Drawing.SizeF(758.4167F, 25F);
             this.xrTable1.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.xrLabel16_BeforePrint);
             // 
             // xrTableRow1
@@ -142,9 +148,12 @@
             this.xrTableRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
             this.ldbarcode,
             this.ldProduct,
+            this.ldcustomv,
             this.ldunitPrice,
             this.ldQty,
-            this.ldAmount});
+            this.ldAmount,
+            this.ldpercentage,
+            this.ldafterpercentage});
             this.xrTableRow1.Name = "xrTableRow1";
             this.xrTableRow1.Weight = 1D;
             // 
@@ -162,7 +171,7 @@
             this.ldbarcode.StylePriority.UsePadding = false;
             this.ldbarcode.StylePriority.UseTextAlignment = false;
             this.ldbarcode.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.ldbarcode.Weight = 2.1508354629762416D;
+            this.ldbarcode.Weight = 3.07968235712218D;
             // 
             // ldProduct
             // 
@@ -177,7 +186,23 @@
             this.ldProduct.StylePriority.UsePadding = false;
             this.ldProduct.StylePriority.UseTextAlignment = false;
             this.ldProduct.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
-            this.ldProduct.Weight = 5.9331311871578D;
+            this.ldProduct.Weight = 7.5226926550370887D;
+            // 
+            // ldcustomv
+            // 
+            this.ldcustomv.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.ldcustomv.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ldcustomv.Multiline = true;
+            this.ldcustomv.Name = "ldcustomv";
+            this.ldcustomv.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.ldcustomv.StylePriority.UseBorders = false;
+            this.ldcustomv.StylePriority.UseFont = false;
+            this.ldcustomv.StylePriority.UsePadding = false;
+            this.ldcustomv.StylePriority.UseTextAlignment = false;
+            this.ldcustomv.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.ldcustomv.Weight = 3.4147228251325727D;
             // 
             // ldunitPrice
             // 
@@ -207,7 +232,7 @@
             this.ldQty.StylePriority.UsePadding = false;
             this.ldQty.StylePriority.UseTextAlignment = false;
             this.ldQty.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
-            this.ldQty.Weight = 3.2282962307050305D;
+            this.ldQty.Weight = 2.5105508401586887D;
             // 
             // ldAmount
             // 
@@ -222,7 +247,39 @@
             this.ldAmount.StylePriority.UsePadding = false;
             this.ldAmount.StylePriority.UseTextAlignment = false;
             this.ldAmount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
-            this.ldAmount.Weight = 4.0165228718377408D;
+            this.ldAmount.Weight = 4.7995165783077756D;
+            // 
+            // ldpercentage
+            // 
+            this.ldpercentage.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.ldpercentage.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.ldpercentage.Multiline = true;
+            this.ldpercentage.Name = "ldpercentage";
+            this.ldpercentage.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.ldpercentage.StylePriority.UseBorders = false;
+            this.ldpercentage.StylePriority.UseFont = false;
+            this.ldpercentage.StylePriority.UsePadding = false;
+            this.ldpercentage.StylePriority.UseTextAlignment = false;
+            this.ldpercentage.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.ldpercentage.Weight = 1.7596467627806347D;
+            // 
+            // ldafterpercentage
+            // 
+            this.ldafterpercentage.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.ldafterpercentage.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.ldafterpercentage.Multiline = true;
+            this.ldafterpercentage.Name = "ldafterpercentage";
+            this.ldafterpercentage.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.ldafterpercentage.StylePriority.UseBorders = false;
+            this.ldafterpercentage.StylePriority.UseFont = false;
+            this.ldafterpercentage.StylePriority.UsePadding = false;
+            this.ldafterpercentage.StylePriority.UseTextAlignment = false;
+            this.ldafterpercentage.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.ldafterpercentage.Weight = 4.4450329503044088D;
             // 
             // TopMargin
             // 
@@ -344,11 +401,14 @@
             // GroupHeader1
             // 
             this.GroupHeader1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrarabic,
+            this.xrpercentage,
+            this.xrafterpercentage,
+            this.xrcustomV,
             this.lblTaxableInvoice,
             this.xrcc1,
             this.xrcc2,
             this.xrlocation,
-            this.xrPanel2,
             this.xrPictureBox1,
             this.lblDate,
             this.ldInvoiceNo,
@@ -374,6 +434,83 @@
             this.GroupHeader1.HeightF = 399.1251F;
             this.GroupHeader1.Name = "GroupHeader1";
             // 
+            // xrarabic
+            // 
+            this.xrarabic.BackColor = System.Drawing.Color.Gainsboro;
+            this.xrarabic.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrarabic.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrarabic.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrarabic.ForeColor = System.Drawing.Color.Brown;
+            this.xrarabic.LocationFloat = new DevExpress.Utils.PointFloat(292.2496F, 179.9583F);
+            this.xrarabic.Name = "xrarabic";
+            this.xrarabic.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrarabic.SizeF = new System.Drawing.SizeF(240.8754F, 20F);
+            this.xrarabic.StylePriority.UseBackColor = false;
+            this.xrarabic.StylePriority.UseBorderDashStyle = false;
+            this.xrarabic.StylePriority.UseBorders = false;
+            this.xrarabic.StylePriority.UseFont = false;
+            this.xrarabic.StylePriority.UseForeColor = false;
+            this.xrarabic.StylePriority.UseTextAlignment = false;
+            this.xrarabic.Text = "Taxable Invoice";
+            this.xrarabic.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrarabic.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.xrarabic_BeforePrint);
+            // 
+            // xrpercentage
+            // 
+            this.xrpercentage.BackColor = System.Drawing.Color.Gainsboro;
+            this.xrpercentage.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrpercentage.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrpercentage.LocationFloat = new DevExpress.Utils.PointFloat(620.4171F, 374.1251F);
+            this.xrpercentage.Name = "xrpercentage";
+            this.xrpercentage.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrpercentage.SizeF = new System.Drawing.SizeF(43.41437F, 25F);
+            this.xrpercentage.StylePriority.UseBackColor = false;
+            this.xrpercentage.StylePriority.UseBorders = false;
+            this.xrpercentage.StylePriority.UseFont = false;
+            this.xrpercentage.StylePriority.UseTextAlignment = false;
+            this.xrpercentage.Text = "percentage";
+            this.xrpercentage.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrpercentage.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.xrpercentage_BeforePrint);
+            // 
+            // xrafterpercentage
+            // 
+            this.xrafterpercentage.BackColor = System.Drawing.Color.Gainsboro;
+            this.xrafterpercentage.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrafterpercentage.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrafterpercentage.LocationFloat = new DevExpress.Utils.PointFloat(663.8315F, 374.1251F);
+            this.xrafterpercentage.Name = "xrafterpercentage";
+            this.xrafterpercentage.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrafterpercentage.SizeF = new System.Drawing.SizeF(109.6688F, 25F);
+            this.xrafterpercentage.StylePriority.UseBackColor = false;
+            this.xrafterpercentage.StylePriority.UseBorders = false;
+            this.xrafterpercentage.StylePriority.UseFont = false;
+            this.xrafterpercentage.StylePriority.UseTextAlignment = false;
+            this.xrafterpercentage.Text = "after percentage";
+            this.xrafterpercentage.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrafterpercentage.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.xrafterpercentage_BeforePrint);
+            // 
+            // xrcustomV
+            // 
+            this.xrcustomV.BackColor = System.Drawing.Color.Gainsboro;
+            this.xrcustomV.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrcustomV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrcustomV.LocationFloat = new DevExpress.Utils.PointFloat(276.6669F, 374.1251F);
+            this.xrcustomV.Name = "xrcustomV";
+            this.xrcustomV.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrcustomV.SizeF = new System.Drawing.SizeF(84.24863F, 25F);
+            this.xrcustomV.StylePriority.UseBackColor = false;
+            this.xrcustomV.StylePriority.UseBorders = false;
+            this.xrcustomV.StylePriority.UseFont = false;
+            this.xrcustomV.StylePriority.UseTextAlignment = false;
+            this.xrcustomV.Text = "Custom V";
+            this.xrcustomV.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            this.xrcustomV.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.xrcustomV_BeforePrint);
+            // 
             // lblTaxableInvoice
             // 
             this.lblTaxableInvoice.BackColor = System.Drawing.Color.Gainsboro;
@@ -386,7 +523,7 @@
             this.lblTaxableInvoice.LocationFloat = new DevExpress.Utils.PointFloat(292.2496F, 159.9583F);
             this.lblTaxableInvoice.Name = "lblTaxableInvoice";
             this.lblTaxableInvoice.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblTaxableInvoice.SizeF = new System.Drawing.SizeF(189.8337F, 20F);
+            this.lblTaxableInvoice.SizeF = new System.Drawing.SizeF(240.8754F, 20F);
             this.lblTaxableInvoice.StylePriority.UseBackColor = false;
             this.lblTaxableInvoice.StylePriority.UseBorderDashStyle = false;
             this.lblTaxableInvoice.StylePriority.UseBorders = false;
@@ -450,16 +587,6 @@
             this.xrlocation.Text = "001";
             this.xrlocation.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.xrlocation.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.xrcc1_BeforePrint);
-            // 
-            // xrPanel2
-            // 
-            this.xrPanel2.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrPanel2.LocationFloat = new DevExpress.Utils.PointFloat(46.54167F, 189.1665F);
-            this.xrPanel2.Name = "xrPanel2";
-            this.xrPanel2.SizeF = new System.Drawing.SizeF(167.5421F, 158.9584F);
-            this.xrPanel2.StylePriority.UseBorders = false;
             // 
             // xrPictureBox1
             // 
@@ -584,7 +711,7 @@
             this.xrbarcode.LocationFloat = new DevExpress.Utils.PointFloat(15.08331F, 374.1251F);
             this.xrbarcode.Name = "xrbarcode";
             this.xrbarcode.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrbarcode.SizeF = new System.Drawing.SizeF(87.99998F, 25F);
+            this.xrbarcode.SizeF = new System.Drawing.SizeF(75.98244F, 25F);
             this.xrbarcode.StylePriority.UseBackColor = false;
             this.xrbarcode.StylePriority.UseBorders = false;
             this.xrbarcode.StylePriority.UseFont = false;
@@ -598,10 +725,10 @@
             this.lblQuantity.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.lblQuantity.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantity.LocationFloat = new DevExpress.Utils.PointFloat(477.0833F, 374.1251F);
+            this.lblQuantity.LocationFloat = new DevExpress.Utils.PointFloat(440.062F, 374.1251F);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblQuantity.SizeF = new System.Drawing.SizeF(132.0834F, 25F);
+            this.lblQuantity.SizeF = new System.Drawing.SizeF(61.94073F, 25F);
             this.lblQuantity.StylePriority.UseBackColor = false;
             this.lblQuantity.StylePriority.UseBorders = false;
             this.lblQuantity.StylePriority.UseFont = false;
@@ -619,7 +746,7 @@
             this.lblenglishname.LocationFloat = new DevExpress.Utils.PointFloat(57.37514F, 9.99999F);
             this.lblenglishname.Name = "lblenglishname";
             this.lblenglishname.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblenglishname.SizeF = new System.Drawing.SizeF(288.4582F, 53.20834F);
+            this.lblenglishname.SizeF = new System.Drawing.SizeF(288.8329F, 53.20834F);
             this.lblenglishname.StylePriority.UseBackColor = false;
             this.lblenglishname.StylePriority.UseBorderDashStyle = false;
             this.lblenglishname.StylePriority.UseBorders = false;
@@ -721,10 +848,10 @@
             this.lblPrice.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.lblPrice.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.LocationFloat = new DevExpress.Utils.PointFloat(345.8333F, 374.1251F);
+            this.lblPrice.LocationFloat = new DevExpress.Utils.PointFloat(360.9155F, 374.1251F);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblPrice.SizeF = new System.Drawing.SizeF(131.25F, 25F);
+            this.lblPrice.SizeF = new System.Drawing.SizeF(79.14642F, 25F);
             this.lblPrice.StylePriority.UseBackColor = false;
             this.lblPrice.StylePriority.UseBorders = false;
             this.lblPrice.StylePriority.UseFont = false;
@@ -738,10 +865,10 @@
             this.lblAmount.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.lblAmount.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAmount.LocationFloat = new DevExpress.Utils.PointFloat(609.1667F, 374.1251F);
+            this.lblAmount.LocationFloat = new DevExpress.Utils.PointFloat(502.0027F, 374.1251F);
             this.lblAmount.Name = "lblAmount";
             this.lblAmount.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblAmount.SizeF = new System.Drawing.SizeF(164.3334F, 25F);
+            this.lblAmount.SizeF = new System.Drawing.SizeF(118.4144F, 25F);
             this.lblAmount.StylePriority.UseBackColor = false;
             this.lblAmount.StylePriority.UseBorders = false;
             this.lblAmount.StylePriority.UseFont = false;
@@ -756,10 +883,10 @@
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.lblProductName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductName.LocationFloat = new DevExpress.Utils.PointFloat(103.0833F, 374.1251F);
+            this.lblProductName.LocationFloat = new DevExpress.Utils.PointFloat(91.06576F, 374.1251F);
             this.lblProductName.Name = "lblProductName";
             this.lblProductName.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblProductName.SizeF = new System.Drawing.SizeF(242.75F, 25F);
+            this.lblProductName.SizeF = new System.Drawing.SizeF(185.6011F, 25F);
             this.lblProductName.StylePriority.UseBackColor = false;
             this.lblProductName.StylePriority.UseBorders = false;
             this.lblProductName.StylePriority.UseFont = false;
@@ -785,9 +912,9 @@
             this.lblAddress,
             this.lblVATNUmber,
             this.lblNumber});
-            this.xrPanel1.LocationFloat = new DevExpress.Utils.PointFloat(46.54167F, 3.999996F);
+            this.xrPanel1.LocationFloat = new DevExpress.Utils.PointFloat(46.54168F, 3.999996F);
             this.xrPanel1.Name = "xrPanel1";
-            this.xrPanel1.SizeF = new System.Drawing.SizeF(732.4169F, 144.1248F);
+            this.xrPanel1.SizeF = new System.Drawing.SizeF(732.4169F, 155.9583F);
             this.xrPanel1.StylePriority.UseBorders = false;
             this.xrPanel1.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.xrPanel1_BeforePrint);
             // 
@@ -809,10 +936,10 @@
             this.xrLabel14.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
             this.xrLabel14.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel14.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(485.8751F, 59.20835F);
+            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(430.5416F, 85.20835F);
             this.xrLabel14.Name = "xrLabel14";
             this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel14.SizeF = new System.Drawing.SizeF(238.8333F, 16F);
+            this.xrLabel14.SizeF = new System.Drawing.SizeF(294.1668F, 16F);
             this.xrLabel14.StylePriority.UseBorderDashStyle = false;
             this.xrLabel14.StylePriority.UseBorders = false;
             this.xrLabel14.StylePriority.UseFont = false;
@@ -826,10 +953,10 @@
             this.xrLabel15.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
             this.xrLabel15.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel15.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(485.8751F, 75.20835F);
+            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(430.5416F, 69.20835F);
             this.xrLabel15.Name = "xrLabel15";
             this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel15.SizeF = new System.Drawing.SizeF(238.8333F, 16F);
+            this.xrLabel15.SizeF = new System.Drawing.SizeF(294.1668F, 16F);
             this.xrLabel15.StylePriority.UseBorderDashStyle = false;
             this.xrLabel15.StylePriority.UseBorders = false;
             this.xrLabel15.StylePriority.UseFont = false;
@@ -843,7 +970,7 @@
             this.xrenglishaddress.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
             this.xrenglishaddress.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrenglishaddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrenglishaddress.LocationFloat = new DevExpress.Utils.PointFloat(11.83348F, 124.9583F);
+            this.xrenglishaddress.LocationFloat = new DevExpress.Utils.PointFloat(11.83348F, 134.9583F);
             this.xrenglishaddress.Name = "xrenglishaddress";
             this.xrenglishaddress.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrenglishaddress.SizeF = new System.Drawing.SizeF(358.6667F, 16F);
@@ -860,10 +987,10 @@
             this.xrenglishlicenseNumber.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
             this.xrenglishlicenseNumber.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrenglishlicenseNumber.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrenglishlicenseNumber.LocationFloat = new DevExpress.Utils.PointFloat(11.83348F, 75.20834F);
+            this.xrenglishlicenseNumber.LocationFloat = new DevExpress.Utils.PointFloat(11.83348F, 69.20835F);
             this.xrenglishlicenseNumber.Name = "xrenglishlicenseNumber";
             this.xrenglishlicenseNumber.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrenglishlicenseNumber.SizeF = new System.Drawing.SizeF(218.2917F, 16F);
+            this.xrenglishlicenseNumber.SizeF = new System.Drawing.SizeF(287.4582F, 16F);
             this.xrenglishlicenseNumber.StylePriority.UseBorderDashStyle = false;
             this.xrenglishlicenseNumber.StylePriority.UseBorders = false;
             this.xrenglishlicenseNumber.StylePriority.UseFont = false;
@@ -877,10 +1004,10 @@
             this.xremglishemail.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
             this.xremglishemail.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xremglishemail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xremglishemail.LocationFloat = new DevExpress.Utils.PointFloat(11.83348F, 59.20834F);
+            this.xremglishemail.LocationFloat = new DevExpress.Utils.PointFloat(11.83348F, 85.20835F);
             this.xremglishemail.Name = "xremglishemail";
             this.xremglishemail.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xremglishemail.SizeF = new System.Drawing.SizeF(218.2917F, 16F);
+            this.xremglishemail.SizeF = new System.Drawing.SizeF(287.4582F, 16F);
             this.xremglishemail.StylePriority.UseBorderDashStyle = false;
             this.xremglishemail.StylePriority.UseBorders = false;
             this.xremglishemail.StylePriority.UseFont = false;
@@ -896,10 +1023,10 @@
             this.lblStoreName.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.lblStoreName.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold);
             this.lblStoreName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblStoreName.LocationFloat = new DevExpress.Utils.PointFloat(431.5417F, 5.999994F);
+            this.lblStoreName.LocationFloat = new DevExpress.Utils.PointFloat(370.5003F, 5.999994F);
             this.lblStoreName.Name = "lblStoreName";
             this.lblStoreName.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblStoreName.SizeF = new System.Drawing.SizeF(295.4168F, 53.20834F);
+            this.lblStoreName.SizeF = new System.Drawing.SizeF(356.4582F, 53.20834F);
             this.lblStoreName.StylePriority.UseBackColor = false;
             this.lblStoreName.StylePriority.UseBorderDashStyle = false;
             this.lblStoreName.StylePriority.UseBorders = false;
@@ -914,10 +1041,10 @@
             this.lblEnglishcontact.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
             this.lblEnglishcontact.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.lblEnglishcontact.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEnglishcontact.LocationFloat = new DevExpress.Utils.PointFloat(11.83348F, 108.9583F);
+            this.lblEnglishcontact.LocationFloat = new DevExpress.Utils.PointFloat(11.83348F, 118.9583F);
             this.lblEnglishcontact.Name = "lblEnglishcontact";
             this.lblEnglishcontact.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblEnglishcontact.SizeF = new System.Drawing.SizeF(218.2917F, 16F);
+            this.lblEnglishcontact.SizeF = new System.Drawing.SizeF(287.4582F, 15.99999F);
             this.lblEnglishcontact.StylePriority.UseBorderDashStyle = false;
             this.lblEnglishcontact.StylePriority.UseBorders = false;
             this.lblEnglishcontact.StylePriority.UseFont = false;
@@ -930,10 +1057,10 @@
             this.lblenglishVAT.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
             this.lblenglishVAT.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.lblenglishVAT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblenglishVAT.LocationFloat = new DevExpress.Utils.PointFloat(11.83348F, 92.95831F);
+            this.lblenglishVAT.LocationFloat = new DevExpress.Utils.PointFloat(11.83348F, 102.9583F);
             this.lblenglishVAT.Name = "lblenglishVAT";
             this.lblenglishVAT.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblenglishVAT.SizeF = new System.Drawing.SizeF(218.2917F, 16F);
+            this.lblenglishVAT.SizeF = new System.Drawing.SizeF(287.4582F, 16F);
             this.lblenglishVAT.StylePriority.UseBorderDashStyle = false;
             this.lblenglishVAT.StylePriority.UseBorders = false;
             this.lblenglishVAT.StylePriority.UseFont = false;
@@ -946,7 +1073,7 @@
             this.lblAddress.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
             this.lblAddress.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.lblAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.LocationFloat = new DevExpress.Utils.PointFloat(370.5003F, 124.9583F);
+            this.lblAddress.LocationFloat = new DevExpress.Utils.PointFloat(370.5003F, 134.9583F);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblAddress.SizeF = new System.Drawing.SizeF(356.4582F, 16F);
@@ -962,10 +1089,10 @@
             this.lblVATNUmber.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
             this.lblVATNUmber.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.lblVATNUmber.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVATNUmber.LocationFloat = new DevExpress.Utils.PointFloat(485.8751F, 91.20835F);
+            this.lblVATNUmber.LocationFloat = new DevExpress.Utils.PointFloat(430.5416F, 101.2084F);
             this.lblVATNUmber.Name = "lblVATNUmber";
             this.lblVATNUmber.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblVATNUmber.SizeF = new System.Drawing.SizeF(241.0833F, 16F);
+            this.lblVATNUmber.SizeF = new System.Drawing.SizeF(296.4167F, 16F);
             this.lblVATNUmber.StylePriority.UseBorderDashStyle = false;
             this.lblVATNUmber.StylePriority.UseBorders = false;
             this.lblVATNUmber.StylePriority.UseFont = false;
@@ -978,10 +1105,10 @@
             this.lblNumber.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Dash;
             this.lblNumber.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.lblNumber.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumber.LocationFloat = new DevExpress.Utils.PointFloat(485.8751F, 107.2084F);
+            this.lblNumber.LocationFloat = new DevExpress.Utils.PointFloat(430.5416F, 117.2084F);
             this.lblNumber.Name = "lblNumber";
             this.lblNumber.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.lblNumber.SizeF = new System.Drawing.SizeF(241.0833F, 16F);
+            this.lblNumber.SizeF = new System.Drawing.SizeF(296.4167F, 16F);
             this.lblNumber.StylePriority.UseBorderDashStyle = false;
             this.lblNumber.StylePriority.UseBorders = false;
             this.lblNumber.StylePriority.UseFont = false;
@@ -1012,10 +1139,6 @@
             this.lblEafterdiscount,
             this.xrarabicwords,
             this.xrLabel2,
-            this.lddiscount,
-            this.ldafterdiscount,
-            this.xrLabel12,
-            this.xrLabel13,
             this.lbltaxamount,
             this.lblnetamount,
             this.ldaftertax,
@@ -1036,7 +1159,8 @@
             // 
             this.xrLabel4.BackColor = System.Drawing.Color.Gainsboro;
             this.xrLabel4.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel4.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Right) 
+            this.xrLabel4.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(346.2081F, 18.04161F);
@@ -1069,6 +1193,7 @@
             this.lblenglishgrandtotal.StylePriority.UseTextAlignment = false;
             this.lblenglishgrandtotal.Text = "Grand Total : ";
             this.lblenglishgrandtotal.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.lblenglishgrandtotal.Visible = false;
             this.lblenglishgrandtotal.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.lblenglishgrandtotal_BeforePrint);
             // 
             // lblEbalance
@@ -1078,7 +1203,7 @@
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.lblEbalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEbalance.LocationFloat = new DevExpress.Utils.PointFloat(54.2908F, 158.0416F);
+            this.lblEbalance.LocationFloat = new DevExpress.Utils.PointFloat(54.2908F, 138.0416F);
             this.lblEbalance.Name = "lblEbalance";
             this.lblEbalance.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblEbalance.SizeF = new System.Drawing.SizeF(291.9173F, 20.00002F);
@@ -1088,6 +1213,7 @@
             this.lblEbalance.StylePriority.UseTextAlignment = false;
             this.lblEbalance.Text = "Balance : ";
             this.lblEbalance.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.lblEbalance.Visible = false;
             this.lblEbalance.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.lblEbalance_BeforePrint);
             // 
             // lblEReceivedamount
@@ -1097,7 +1223,7 @@
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.lblEReceivedamount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEReceivedamount.LocationFloat = new DevExpress.Utils.PointFloat(54.2908F, 138.0416F);
+            this.lblEReceivedamount.LocationFloat = new DevExpress.Utils.PointFloat(54.2908F, 158.0415F);
             this.lblEReceivedamount.Name = "lblEReceivedamount";
             this.lblEReceivedamount.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblEReceivedamount.SizeF = new System.Drawing.SizeF(291.9173F, 19.99998F);
@@ -1107,6 +1233,7 @@
             this.lblEReceivedamount.StylePriority.UseTextAlignment = false;
             this.lblEReceivedamount.Text = "Recieved Cash : ";
             this.lblEReceivedamount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.lblEReceivedamount.Visible = false;
             this.lblEReceivedamount.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.lblEReceivedamount_BeforePrint);
             // 
             // lblEnetamount
@@ -1126,6 +1253,7 @@
             this.lblEnetamount.StylePriority.UseTextAlignment = false;
             this.lblEnetamount.Text = "Net Amount : ";
             this.lblEnetamount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.lblEnetamount.Visible = false;
             this.lblEnetamount.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.lblEnetamount_BeforePrint);
             // 
             // lblvatAmount
@@ -1145,6 +1273,7 @@
             this.lblvatAmount.StylePriority.UseTextAlignment = false;
             this.lblvatAmount.Text = "Tax Amount 15% : ";
             this.lblvatAmount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.lblvatAmount.Visible = false;
             this.lblvatAmount.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.lblvatAmount_BeforePrint);
             // 
             // lblEdiscount
@@ -1164,6 +1293,7 @@
             this.lblEdiscount.StylePriority.UseTextAlignment = false;
             this.lblEdiscount.Text = "Tax Amount 15% : ";
             this.lblEdiscount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.lblEdiscount.Visible = false;
             this.lblEdiscount.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.lblEdiscount_BeforePrint);
             // 
             // lblEafterdiscount
@@ -1183,6 +1313,7 @@
             this.lblEafterdiscount.StylePriority.UseTextAlignment = false;
             this.lblEafterdiscount.Text = "Net Amount : ";
             this.lblEafterdiscount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.lblEafterdiscount.Visible = false;
             this.lblEafterdiscount.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.lblEafterdiscount_BeforePrint);
             // 
             // xrarabicwords
@@ -1220,6 +1351,7 @@
             this.xrLabel2.StylePriority.UseTextAlignment = false;
             this.xrLabel2.Text = "Grand Total : ";
             this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
+            this.xrLabel2.Visible = false;
             this.xrLabel2.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.xrLabel2_BeforePrint);
             // 
             // lddiscount
@@ -1230,7 +1362,7 @@
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.lddiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lddiscount.ForeColor = System.Drawing.Color.Brown;
-            this.lddiscount.LocationFloat = new DevExpress.Utils.PointFloat(638.1254F, 58.04163F);
+            this.lddiscount.LocationFloat = new DevExpress.Utils.PointFloat(618.167F, 27.20852F);
             this.lddiscount.Name = "lddiscount";
             this.lddiscount.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lddiscount.SizeF = new System.Drawing.SizeF(128.4581F, 20F);
@@ -1241,6 +1373,7 @@
             this.lddiscount.StylePriority.UseTextAlignment = false;
             this.lddiscount.Text = "1200";
             this.lddiscount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.lddiscount.Visible = false;
             this.lddiscount.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.xrLabel16_BeforePrint);
             // 
             // ldafterdiscount
@@ -1251,7 +1384,7 @@
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.ldafterdiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ldafterdiscount.ForeColor = System.Drawing.Color.Brown;
-            this.ldafterdiscount.LocationFloat = new DevExpress.Utils.PointFloat(638.1254F, 78.04161F);
+            this.ldafterdiscount.LocationFloat = new DevExpress.Utils.PointFloat(618.167F, 47.20847F);
             this.ldafterdiscount.Name = "ldafterdiscount";
             this.ldafterdiscount.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.ldafterdiscount.SizeF = new System.Drawing.SizeF(128.4581F, 20F);
@@ -1262,6 +1395,7 @@
             this.ldafterdiscount.StylePriority.UseTextAlignment = false;
             this.ldafterdiscount.Text = "2000";
             this.ldafterdiscount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.ldafterdiscount.Visible = false;
             this.ldafterdiscount.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.xrLabel16_BeforePrint);
             // 
             // xrLabel12
@@ -1271,7 +1405,7 @@
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(346.2081F, 78.04159F);
+            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(326.2496F, 47.20847F);
             this.xrLabel12.Name = "xrLabel12";
             this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel12.SizeF = new System.Drawing.SizeF(291.9173F, 20F);
@@ -1281,6 +1415,7 @@
             this.xrLabel12.StylePriority.UseTextAlignment = false;
             this.xrLabel12.Text = "Net Amount : ";
             this.xrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.xrLabel12.Visible = false;
             this.xrLabel12.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.xrLabel12_BeforePrint);
             // 
             // xrLabel13
@@ -1290,7 +1425,7 @@
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(346.2081F, 58.04157F);
+            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(326.2496F, 27.20846F);
             this.xrLabel13.Name = "xrLabel13";
             this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel13.SizeF = new System.Drawing.SizeF(291.9173F, 20F);
@@ -1300,6 +1435,7 @@
             this.xrLabel13.StylePriority.UseTextAlignment = false;
             this.xrLabel13.Text = "Tax Amount 15% : ";
             this.xrLabel13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
+            this.xrLabel13.Visible = false;
             this.xrLabel13.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.xrLabel13_BeforePrint);
             // 
             // lbltaxamount
@@ -1309,7 +1445,7 @@
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.lbltaxamount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltaxamount.LocationFloat = new DevExpress.Utils.PointFloat(346.2081F, 98.0416F);
+            this.lbltaxamount.LocationFloat = new DevExpress.Utils.PointFloat(346.2081F, 58.0416F);
             this.lbltaxamount.Name = "lbltaxamount";
             this.lbltaxamount.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lbltaxamount.SizeF = new System.Drawing.SizeF(291.9173F, 20F);
@@ -1327,7 +1463,7 @@
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.lblnetamount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblnetamount.LocationFloat = new DevExpress.Utils.PointFloat(346.2081F, 118.0416F);
+            this.lblnetamount.LocationFloat = new DevExpress.Utils.PointFloat(346.2081F, 78.0416F);
             this.lblnetamount.Name = "lblnetamount";
             this.lblnetamount.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblnetamount.SizeF = new System.Drawing.SizeF(291.9173F, 20F);
@@ -1346,7 +1482,7 @@
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.ldaftertax.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ldaftertax.ForeColor = System.Drawing.Color.Brown;
-            this.ldaftertax.LocationFloat = new DevExpress.Utils.PointFloat(638.1254F, 118.0416F);
+            this.ldaftertax.LocationFloat = new DevExpress.Utils.PointFloat(638.1254F, 78.0416F);
             this.ldaftertax.Name = "ldaftertax";
             this.ldaftertax.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.ldaftertax.SizeF = new System.Drawing.SizeF(128.4581F, 20F);
@@ -1367,7 +1503,7 @@
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.ldtaxamount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ldtaxamount.ForeColor = System.Drawing.Color.Brown;
-            this.ldtaxamount.LocationFloat = new DevExpress.Utils.PointFloat(638.1254F, 98.04165F);
+            this.ldtaxamount.LocationFloat = new DevExpress.Utils.PointFloat(638.1254F, 58.04165F);
             this.ldtaxamount.Name = "ldtaxamount";
             this.ldtaxamount.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.ldtaxamount.SizeF = new System.Drawing.SizeF(128.4581F, 20F);
@@ -1387,7 +1523,7 @@
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.lblRecievedCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecievedCash.LocationFloat = new DevExpress.Utils.PointFloat(346.2081F, 138.0416F);
+            this.lblRecievedCash.LocationFloat = new DevExpress.Utils.PointFloat(346.2081F, 118.0415F);
             this.lblRecievedCash.Name = "lblRecievedCash";
             this.lblRecievedCash.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblRecievedCash.SizeF = new System.Drawing.SizeF(291.9173F, 19.99998F);
@@ -1405,7 +1541,7 @@
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.lblBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBalance.LocationFloat = new DevExpress.Utils.PointFloat(346.2081F, 158.0416F);
+            this.lblBalance.LocationFloat = new DevExpress.Utils.PointFloat(346.2081F, 98.0416F);
             this.lblBalance.Name = "lblBalance";
             this.lblBalance.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.lblBalance.SizeF = new System.Drawing.SizeF(291.9173F, 20.00002F);
@@ -1424,7 +1560,7 @@
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.ldBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ldBalance.ForeColor = System.Drawing.Color.Brown;
-            this.ldBalance.LocationFloat = new DevExpress.Utils.PointFloat(638.1254F, 158.0416F);
+            this.ldBalance.LocationFloat = new DevExpress.Utils.PointFloat(638.1254F, 98.0416F);
             this.ldBalance.Name = "ldBalance";
             this.ldBalance.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.ldBalance.SizeF = new System.Drawing.SizeF(128.4581F, 20F);
@@ -1486,7 +1622,7 @@
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.ldRecievedCash.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ldRecievedCash.ForeColor = System.Drawing.Color.Brown;
-            this.ldRecievedCash.LocationFloat = new DevExpress.Utils.PointFloat(638.1254F, 138.0417F);
+            this.ldRecievedCash.LocationFloat = new DevExpress.Utils.PointFloat(638.1254F, 118.0416F);
             this.ldRecievedCash.Name = "ldRecievedCash";
             this.ldRecievedCash.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.ldRecievedCash.SizeF = new System.Drawing.SizeF(128.4581F, 20F);
@@ -1502,6 +1638,10 @@
             // ReportFooter
             // 
             this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel12,
+            this.ldafterdiscount,
+            this.lddiscount,
+            this.xrLabel13,
             this.xrLabel9});
             this.ReportFooter.Name = "ReportFooter";
             // 
@@ -1534,7 +1674,7 @@
             this.GroupHeader1,
             this.GroupFooter1,
             this.ReportFooter});
-            this.Margins = new System.Drawing.Printing.Margins(7, 3, 27, 72);
+            this.Margins = new System.Drawing.Printing.Margins(4, 3, 27, 72);
             this.PageHeight = 1169;
             this.PageWidth = 827;
             this.PaperKind = System.Drawing.Printing.PaperKind.A4;
@@ -1614,7 +1754,6 @@
         private DevExpress.XtraReports.UI.XRLabel lblInvoiceNumber;
         private DevExpress.XtraReports.UI.XRLabel xrpaymenttype;
         private DevExpress.XtraReports.UI.XRLabel ldpaymentname;
-        private DevExpress.XtraReports.UI.XRPanel xrPanel2;
         private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
         private DevExpress.XtraReports.UI.XRPanel xrPanel3;
         private DevExpress.XtraReports.UI.XRLabel xrcc1;
@@ -1633,5 +1772,12 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel4;
         private DevExpress.XtraReports.UI.ReportFooterBand ReportFooter;
         private DevExpress.XtraReports.UI.XRLabel xrLabel9;
+        private DevExpress.XtraReports.UI.XRTableCell ldcustomv;
+        private DevExpress.XtraReports.UI.XRTableCell ldpercentage;
+        private DevExpress.XtraReports.UI.XRTableCell ldafterpercentage;
+        private DevExpress.XtraReports.UI.XRLabel xrpercentage;
+        private DevExpress.XtraReports.UI.XRLabel xrafterpercentage;
+        private DevExpress.XtraReports.UI.XRLabel xrcustomV;
+        private DevExpress.XtraReports.UI.XRLabel xrarabic;
     }
 }

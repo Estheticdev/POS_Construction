@@ -39,8 +39,8 @@ namespace POS_Software.Reports.Sales
         private void lblGrandTotal_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
         {
             lblGrandTotal.Text = ": السعر الأجمالي قبل الضريبة";
-            lblRecievedCash.Text = "إعادة ينخل النقدية : ";
-            lblBalance.Text = "توازن : ";
+            lblRecievedCash.Text = "الأجمالي بعد الضريبة";
+            lblBalance.Text = value.Rows[0]["guarantee"].ToString()+"%"+ "ضمان أعمال  ";
             
            //string date = Convert.ToDateTime(strdate[0]).ToString("yyyy-MM-dd") + "T" + strdate[1] + "Z";
            // barcodegenerator(lblenglishname.Text, Modules.Main.LicenceVAT, date, ldaftertax.Text, ldtaxamount.Text);
@@ -303,6 +303,9 @@ namespace POS_Software.Reports.Sales
             ldunitPrice.Text = value.Rows[CurrentRowIndex]["Item_Sale_Price"].ToString();
             ldQty.Text = value.Rows[CurrentRowIndex]["Qty"].ToString();
             ldAmount.Text = value.Rows[CurrentRowIndex]["Amount"].ToString();
+            ldcustomv.Text = value.Rows[CurrentRowIndex]["Custom_Size"].ToString();
+            ldpercentage.Text = value.Rows[CurrentRowIndex]["Percentage"].ToString();
+            ldafterpercentage.Text = value.Rows[CurrentRowIndex]["Percentage_Amount"].ToString();
             ldGrandTotal.Text = value.Rows[0]["GrandTotal"].ToString();
             lddiscount.Text = value.Rows[0]["discount"].ToString();
             ldafterdiscount.Text = value.Rows[0]["discountamount"].ToString();
@@ -414,6 +417,31 @@ namespace POS_Software.Reports.Sales
         private void xrpaymenttype_BeforePrint_1(object sender, System.Drawing.Printing.PrintEventArgs e)
         {
             xrpaymenttype.Text = "نوع الدفع";
+        }
+
+        private void xrcustomV_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+            xrcustomV.Text = "الوحدة";
+        }
+
+        private void xrpercentage_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+            xrpercentage.Text = "%";
+        }
+
+        private void xrafterpercentage_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+            xrafterpercentage.Text = "الأجمالي";
+        }
+
+        private void xrLabel3_BeforePrint_1(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+           // xrLabel3.Text = "فاتورة ضريبة القيمة المضافة";
+        }
+
+        private void xrarabic_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+            xrarabic.Text = "فاتورة ضريبة القيمة المضافة";
         }
     }
 }

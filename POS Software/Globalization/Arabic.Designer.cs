@@ -277,7 +277,7 @@ namespace POS_Software.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to فاتورة بيع جديدة.
+        ///   Looks up a localized string similar to فاتورة أعمال.
         /// </summary>
         internal static string btnSales {
             get {
@@ -408,6 +408,15 @@ namespace POS_Software.Globalization {
         internal static string Created_By {
             get {
                 return ResourceManager.GetString("Created_By", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to الوحدة.
+        /// </summary>
+        internal static string Custom_Size {
+            get {
+                return ResourceManager.GetString("Custom_Size", resourceCulture);
             }
         }
         
@@ -777,6 +786,15 @@ namespace POS_Software.Globalization {
         internal static string lblGrandAmount {
             get {
                 return ResourceManager.GetString("lblGrandAmount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ضمان أعمال.
+        /// </summary>
+        internal static string lblgurrentee {
+            get {
+                return ResourceManager.GetString("lblgurrentee", resourceCulture);
             }
         }
         
@@ -1204,7 +1222,7 @@ namespace POS_Software.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to رمز البائع.
+        ///   Looks up a localized string similar to رمز أعمال.
         /// </summary>
         internal static string lblVendorCode {
             get {
@@ -1213,7 +1231,7 @@ namespace POS_Software.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to معرف البائع.
+        ///   Looks up a localized string similar to معرف أعمال.
         /// </summary>
         internal static string lblVendorID {
             get {
@@ -1236,6 +1254,24 @@ namespace POS_Software.Globalization {
         internal static string PackPrice {
             get {
                 return ResourceManager.GetString("PackPrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to %.
+        /// </summary>
+        internal static string Percentage {
+            get {
+                return ResourceManager.GetString("Percentage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to الأجمالي.
+        /// </summary>
+        internal static string Percentage_Amount {
+            get {
+                return ResourceManager.GetString("Percentage_Amount", resourceCulture);
             }
         }
         
@@ -1267,7 +1303,7 @@ namespace POS_Software.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to فواتير المبيعات.
+        ///   Looks up a localized string similar to فواتير.
         /// </summary>
         internal static string rp2 {
             get {

@@ -214,7 +214,7 @@
     <comment>Item Detail</comment>
   </data>
   <data name="btnSales" xml:space="preserve">
-    <value>New Sale Invoice</value>
+    <value>New Invoice</value>
     <comment>New Sale Invoice</comment>
   </data>
   <data name="btnSalesReturns" xml:space="preserve">
@@ -272,6 +272,10 @@
   <data name="Created_By" xml:space="preserve">
     <value>Created By</value>
     <comment>Created By</comment>
+  </data>
+  <data name="Custom_Size" xml:space="preserve">
+    <value>Custom_Size</value>
+    <comment>Custom_Size</comment>
   </data>
   <data name="frmCustomerDeffination" xml:space="preserve">
     <value>Customer Definition</value>
@@ -436,6 +440,10 @@
   <data name="lblGrandAmount" xml:space="preserve">
     <value>Grand Amount:</value>
     <comment>Grand Amount:</comment>
+  </data>
+  <data name="lblgurrentee" xml:space="preserve">
+    <value>Guarantee</value>
+    <comment>lblgurrentee</comment>
   </data>
   <data name="lblInvoiceNumber" xml:space="preserve">
     <value>Invoice Number:</value>
@@ -641,6 +649,14 @@
     <value>Pack Price</value>
     <comment>Pack Price</comment>
   </data>
+  <data name="Percentage" xml:space="preserve">
+    <value>Percentage</value>
+    <comment>Percentage</comment>
+  </data>
+  <data name="Percentage_Amount" xml:space="preserve">
+    <value>Percentage_Amount</value>
+    <comment>Percentage_Amount</comment>
+  </data>
   <data name="Qty" xml:space="preserve">
     <value>Quantity</value>
     <comment>Quantity</comment>
@@ -654,7 +670,7 @@
     <comment>General</comment>
   </data>
   <data name="rp2" xml:space="preserve">
-    <value>Sales Invoices</value>
+    <value>Invoices</value>
     <comment>Sales Invoices</comment>
   </data>
   <data name="rp3" xml:space="preserve">

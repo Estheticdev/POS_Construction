@@ -45,6 +45,7 @@
             this.Item_ID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Item_Barcode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Item_Name = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Custom_Size = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Item_Sale_Price = new DevExpress.XtraGrid.Columns.GridColumn();
             this.RPtUnitPrice = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.PackPrice = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -57,6 +58,9 @@
             this.Stock_Critical_Level = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Percentage = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.rppercentage = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
+            this.Percentage_Amount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblSalesInvoice = new System.Windows.Forms.Label();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
@@ -78,6 +82,10 @@
             this.lblScanBarcode = new System.Windows.Forms.Label();
             this.gPaymentBox = new DevExpress.XtraEditors.GroupControl();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.Txtguarantee = new DevExpress.XtraEditors.TextEdit();
+            this.lblgurrentee = new System.Windows.Forms.Label();
+            this.TxtDiscount = new DevExpress.XtraEditors.TextEdit();
+            this.label3 = new System.Windows.Forms.Label();
             this.TxtShopAmount = new DevExpress.XtraEditors.TextEdit();
             this.lblShopAmount = new System.Windows.Forms.Label();
             this.TxtTaxAmount = new DevExpress.XtraEditors.TextEdit();
@@ -128,13 +136,12 @@
             this.DtETo1 = new DevExpress.XtraEditors.DateEdit();
             this.DtEFrom2 = new DevExpress.XtraEditors.DateEdit();
             this.ErPro = new DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider(this.components);
-            this.TxtDiscount = new DevExpress.XtraEditors.TextEdit();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TxtBarcode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RPtUnitPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RepTxtQty)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rppercentage)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -144,6 +151,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gPaymentBox)).BeginInit();
             this.gPaymentBox.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Txtguarantee.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtDiscount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtShopAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtTaxAmount.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtTaxPercentage.Properties)).BeginInit();
@@ -167,7 +176,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DtEFrom2.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtEFrom2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErPro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtDiscount.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // TxtBarcode
@@ -202,13 +210,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridControl1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridControl1.Location = new System.Drawing.Point(7, 93);
+            this.gridControl1.Location = new System.Drawing.Point(5, 100);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.RepTxtQty,
-            this.RPtUnitPrice});
-            this.gridControl1.Size = new System.Drawing.Size(785, 350);
+            this.RPtUnitPrice,
+            this.rppercentage});
+            this.gridControl1.Size = new System.Drawing.Size(972, 362);
             this.gridControl1.TabIndex = 2;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -219,6 +228,7 @@
             this.Item_ID,
             this.Item_Barcode,
             this.Item_Name,
+            this.Custom_Size,
             this.Item_Sale_Price,
             this.PackPrice,
             this.Qty,
@@ -228,7 +238,9 @@
             this.Stock_ID,
             this.Stock_Critical_Level,
             this.gridColumn7,
-            this.gridColumn8});
+            this.gridColumn8,
+            this.Percentage,
+            this.Percentage_Amount});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsNavigation.AutoFocusNewRow = true;
@@ -258,7 +270,7 @@
             this.Item_Barcode.OptionsColumn.AllowFocus = false;
             this.Item_Barcode.Visible = true;
             this.Item_Barcode.VisibleIndex = 0;
-            this.Item_Barcode.Width = 89;
+            this.Item_Barcode.Width = 83;
             // 
             // Item_Name
             // 
@@ -273,7 +285,21 @@
             this.Item_Name.Name = "Item_Name";
             this.Item_Name.Visible = true;
             this.Item_Name.VisibleIndex = 1;
-            this.Item_Name.Width = 311;
+            this.Item_Name.Width = 228;
+            // 
+            // Custom_Size
+            // 
+            this.Custom_Size.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.Custom_Size.AppearanceCell.Options.UseFont = true;
+            this.Custom_Size.AppearanceCell.Options.UseTextOptions = true;
+            this.Custom_Size.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Custom_Size.AppearanceHeader.Options.UseFont = true;
+            this.Custom_Size.Caption = "Custom_Size";
+            this.Custom_Size.FieldName = "Custom_Size";
+            this.Custom_Size.Name = "Custom_Size";
+            this.Custom_Size.Visible = true;
+            this.Custom_Size.VisibleIndex = 2;
+            this.Custom_Size.Width = 115;
             // 
             // Item_Sale_Price
             // 
@@ -290,7 +316,7 @@
             this.Item_Sale_Price.FieldName = "Item_Sale_Price";
             this.Item_Sale_Price.Name = "Item_Sale_Price";
             this.Item_Sale_Price.Visible = true;
-            this.Item_Sale_Price.VisibleIndex = 2;
+            this.Item_Sale_Price.VisibleIndex = 3;
             this.Item_Sale_Price.Width = 89;
             // 
             // RPtUnitPrice
@@ -309,8 +335,8 @@
             this.PackPrice.FieldName = "Pack_Price";
             this.PackPrice.Name = "PackPrice";
             this.PackPrice.Visible = true;
-            this.PackPrice.VisibleIndex = 3;
-            this.PackPrice.Width = 100;
+            this.PackPrice.VisibleIndex = 4;
+            this.PackPrice.Width = 77;
             // 
             // Qty
             // 
@@ -328,8 +354,8 @@
             this.Qty.Name = "Qty";
             this.Qty.OptionsColumn.AllowEdit = false;
             this.Qty.Visible = true;
-            this.Qty.VisibleIndex = 4;
-            this.Qty.Width = 85;
+            this.Qty.VisibleIndex = 5;
+            this.Qty.Width = 62;
             // 
             // RepTxtQty
             // 
@@ -355,8 +381,8 @@
             this.Item_Amount.OptionsColumn.AllowEdit = false;
             this.Item_Amount.OptionsColumn.AllowFocus = false;
             this.Item_Amount.Visible = true;
-            this.Item_Amount.VisibleIndex = 5;
-            this.Item_Amount.Width = 88;
+            this.Item_Amount.VisibleIndex = 6;
+            this.Item_Amount.Width = 83;
             // 
             // Unit
             // 
@@ -402,6 +428,42 @@
             this.gridColumn8.FieldName = "Piece_Per_Pack";
             this.gridColumn8.Name = "gridColumn8";
             // 
+            // Percentage
+            // 
+            this.Percentage.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.Percentage.AppearanceCell.Options.UseFont = true;
+            this.Percentage.AppearanceCell.Options.UseTextOptions = true;
+            this.Percentage.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Percentage.AppearanceHeader.Options.UseFont = true;
+            this.Percentage.Caption = "Percentage";
+            this.Percentage.ColumnEdit = this.rppercentage;
+            this.Percentage.FieldName = "Percentage";
+            this.Percentage.Name = "Percentage";
+            this.Percentage.Visible = true;
+            this.Percentage.VisibleIndex = 7;
+            this.Percentage.Width = 78;
+            // 
+            // rppercentage
+            // 
+            this.rppercentage.AutoHeight = false;
+            this.rppercentage.Name = "rppercentage";
+            this.rppercentage.EditValueChanged += new System.EventHandler(this.rppercentage_EditValueChanged);
+            this.rppercentage.Leave += new System.EventHandler(this.rppercentage_Leave);
+            // 
+            // Percentage_Amount
+            // 
+            this.Percentage_Amount.AppearanceCell.Font = new System.Drawing.Font("Tahoma", 9.75F);
+            this.Percentage_Amount.AppearanceCell.Options.UseFont = true;
+            this.Percentage_Amount.AppearanceCell.Options.UseTextOptions = true;
+            this.Percentage_Amount.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.Percentage_Amount.AppearanceHeader.Options.UseFont = true;
+            this.Percentage_Amount.Caption = "Percentage_Amount";
+            this.Percentage_Amount.FieldName = "Percentage_Amount";
+            this.Percentage_Amount.Name = "Percentage_Amount";
+            this.Percentage_Amount.Visible = true;
+            this.Percentage_Amount.VisibleIndex = 8;
+            this.Percentage_Amount.Width = 132;
+            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -410,7 +472,7 @@
             this.panel1.Controls.Add(this.lblSalesInvoice);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1008, 39);
+            this.panel1.Size = new System.Drawing.Size(1195, 39);
             this.panel1.TabIndex = 47;
             // 
             // lblSalesInvoice
@@ -419,7 +481,7 @@
             this.lblSalesInvoice.AutoSize = true;
             this.lblSalesInvoice.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSalesInvoice.ForeColor = System.Drawing.Color.White;
-            this.lblSalesInvoice.Location = new System.Drawing.Point(446, 8);
+            this.lblSalesInvoice.Location = new System.Drawing.Point(539, 8);
             this.lblSalesInvoice.Name = "lblSalesInvoice";
             this.lblSalesInvoice.Size = new System.Drawing.Size(117, 22);
             this.lblSalesInvoice.TabIndex = 0;
@@ -433,7 +495,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(4, 42);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.TPSalesInvoice;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1002, 496);
+            this.xtraTabControl1.Size = new System.Drawing.Size(1189, 496);
             this.xtraTabControl1.TabIndex = 51;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.TPSalesInvoice,
@@ -470,7 +532,7 @@
             this.TPSalesInvoice.Controls.Add(this.btnAdd);
             this.TPSalesInvoice.Controls.Add(this.TxtBarcode);
             this.TPSalesInvoice.Name = "TPSalesInvoice";
-            this.TPSalesInvoice.Size = new System.Drawing.Size(1000, 471);
+            this.TPSalesInvoice.Size = new System.Drawing.Size(1187, 471);
             this.TPSalesInvoice.Text = "Sales Invoice";
             // 
             // LblComment
@@ -493,7 +555,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(745, 77);
+            this.label2.Location = new System.Drawing.Point(927, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 88;
@@ -503,7 +565,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(701, 70);
+            this.label1.Location = new System.Drawing.Point(883, 72);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 88;
@@ -514,7 +576,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(935, 25);
+            this.checkBox1.Location = new System.Drawing.Point(1128, 19);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(50, 23);
             this.checkBox1.TabIndex = 87;
@@ -525,7 +587,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(745, 64);
+            this.label14.Location = new System.Drawing.Point(927, 66);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(21, 13);
             this.label14.TabIndex = 86;
@@ -535,7 +597,7 @@
             // 
             this.lblCustomerBalance.AutoSize = true;
             this.lblCustomerBalance.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerBalance.Location = new System.Drawing.Point(665, 46);
+            this.lblCustomerBalance.Location = new System.Drawing.Point(847, 48);
             this.lblCustomerBalance.Name = "lblCustomerBalance";
             this.lblCustomerBalance.Size = new System.Drawing.Size(115, 13);
             this.lblCustomerBalance.TabIndex = 85;
@@ -545,11 +607,11 @@
             // 
             this.lblCellNo.AutoSize = true;
             this.lblCellNo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCellNo.Location = new System.Drawing.Point(412, 3);
+            this.lblCellNo.Location = new System.Drawing.Point(418, 3);
             this.lblCellNo.Name = "lblCellNo";
-            this.lblCellNo.Size = new System.Drawing.Size(111, 13);
+            this.lblCellNo.Size = new System.Drawing.Size(38, 13);
             this.lblCellNo.TabIndex = 84;
-            this.lblCellNo.Text = "Code/Cell Number:";
+            this.lblCellNo.Text = "Code:";
             // 
             // TxtGetRegularCustomer
             // 
@@ -594,7 +656,7 @@
             // 
             this.lblRegCustomerName.AutoSize = true;
             this.lblRegCustomerName.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegCustomerName.Location = new System.Drawing.Point(534, 47);
+            this.lblRegCustomerName.Location = new System.Drawing.Point(716, 49);
             this.lblRegCustomerName.Name = "lblRegCustomerName";
             this.lblRegCustomerName.Size = new System.Drawing.Size(131, 13);
             this.lblRegCustomerName.TabIndex = 80;
@@ -605,7 +667,7 @@
             // 
             this.lblCustomerName.AutoSize = true;
             this.lblCustomerName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerName.Location = new System.Drawing.Point(533, 60);
+            this.lblCustomerName.Location = new System.Drawing.Point(715, 62);
             this.lblCustomerName.Name = "lblCustomerName";
             this.lblCustomerName.Size = new System.Drawing.Size(162, 19);
             this.lblCustomerName.TabIndex = 79;
@@ -652,8 +714,9 @@
             this.gPaymentBox.AppearanceCaption.Options.UseBackColor = true;
             this.gPaymentBox.AppearanceCaption.Options.UseBorderColor = true;
             this.gPaymentBox.AppearanceCaption.Options.UseFont = true;
+            this.gPaymentBox.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.gPaymentBox.Controls.Add(this.panel2);
-            this.gPaymentBox.Location = new System.Drawing.Point(794, 49);
+            this.gPaymentBox.Location = new System.Drawing.Point(981, 49);
             this.gPaymentBox.Name = "gPaymentBox";
             this.gPaymentBox.Size = new System.Drawing.Size(197, 414);
             this.gPaymentBox.TabIndex = 70;
@@ -663,6 +726,8 @@
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.Txtguarantee);
+            this.panel2.Controls.Add(this.lblgurrentee);
             this.panel2.Controls.Add(this.TxtDiscount);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.TxtShopAmount);
@@ -688,6 +753,59 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(191, 383);
             this.panel2.TabIndex = 0;
+            // 
+            // Txtguarantee
+            // 
+            this.Txtguarantee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.Txtguarantee.EnterMoveNextControl = true;
+            this.Txtguarantee.Location = new System.Drawing.Point(73, 185);
+            this.Txtguarantee.Name = "Txtguarantee";
+            this.Txtguarantee.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Txtguarantee.Properties.Appearance.Options.UseFont = true;
+            this.Txtguarantee.Properties.MaxLength = 15;
+            this.Txtguarantee.Size = new System.Drawing.Size(104, 20);
+            this.Txtguarantee.TabIndex = 83;
+            this.Txtguarantee.Tag = "*";
+            this.Txtguarantee.Leave += new System.EventHandler(this.Txtguarantee_Leave);
+            // 
+            // lblgurrentee
+            // 
+            this.lblgurrentee.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblgurrentee.AutoSize = true;
+            this.lblgurrentee.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblgurrentee.Location = new System.Drawing.Point(70, 166);
+            this.lblgurrentee.Name = "lblgurrentee";
+            this.lblgurrentee.Size = new System.Drawing.Size(76, 16);
+            this.lblgurrentee.TabIndex = 84;
+            this.lblgurrentee.Text = "Guarantee";
+            // 
+            // TxtDiscount
+            // 
+            this.TxtDiscount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtDiscount.EnterMoveNextControl = true;
+            this.TxtDiscount.Location = new System.Drawing.Point(72, 184);
+            this.TxtDiscount.Name = "TxtDiscount";
+            this.TxtDiscount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDiscount.Properties.Appearance.Options.UseFont = true;
+            this.TxtDiscount.Properties.MaxLength = 15;
+            this.TxtDiscount.Size = new System.Drawing.Size(105, 20);
+            this.TxtDiscount.TabIndex = 81;
+            this.TxtDiscount.Tag = "";
+            this.TxtDiscount.Visible = false;
+            this.TxtDiscount.EditValueChanged += new System.EventHandler(this.TxtDiscount_EditValueChanged);
+            this.TxtDiscount.Leave += new System.EventHandler(this.TxtDiscount_Leave);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(69, 165);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 16);
+            this.label3.TabIndex = 82;
+            this.label3.Text = "Discount%";
+            this.label3.Visible = false;
             // 
             // TxtShopAmount
             // 
@@ -931,7 +1049,7 @@
             // 
             this.TxtAdmin.EditValue = "Admin";
             this.TxtAdmin.Enabled = false;
-            this.TxtAdmin.Location = new System.Drawing.Point(794, 21);
+            this.TxtAdmin.Location = new System.Drawing.Point(981, 21);
             this.TxtAdmin.Name = "TxtAdmin";
             this.TxtAdmin.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtAdmin.Properties.Appearance.Options.UseFont = true;
@@ -944,7 +1062,7 @@
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUser.Location = new System.Drawing.Point(791, 3);
+            this.lblUser.Location = new System.Drawing.Point(978, 3);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(36, 13);
             this.lblUser.TabIndex = 57;
@@ -1044,7 +1162,7 @@
             this.TPTodaySale.Controls.Add(this.DtETo1);
             this.TPTodaySale.Controls.Add(this.DtEFrom2);
             this.TPTodaySale.Name = "TPTodaySale";
-            this.TPTodaySale.Size = new System.Drawing.Size(1000, 471);
+            this.TPTodaySale.Size = new System.Drawing.Size(1187, 471);
             this.TPTodaySale.Text = "Today Sale";
             // 
             // DtETo
@@ -1072,7 +1190,7 @@
             this.gridControl2.Name = "gridControl2";
             this.gridControl2.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemTextEdit1});
-            this.gridControl2.Size = new System.Drawing.Size(982, 417);
+            this.gridControl2.Size = new System.Drawing.Size(1169, 417);
             this.gridControl2.TabIndex = 3;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -1298,37 +1416,11 @@
             // 
             this.ErPro.ContainerControl = this;
             // 
-            // TxtDiscount
-            // 
-            this.TxtDiscount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtDiscount.EnterMoveNextControl = true;
-            this.TxtDiscount.Location = new System.Drawing.Point(70, 184);
-            this.TxtDiscount.Name = "TxtDiscount";
-            this.TxtDiscount.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtDiscount.Properties.Appearance.Options.UseFont = true;
-            this.TxtDiscount.Properties.MaxLength = 15;
-            this.TxtDiscount.Size = new System.Drawing.Size(107, 20);
-            this.TxtDiscount.TabIndex = 81;
-            this.TxtDiscount.Tag = "";
-            this.TxtDiscount.EditValueChanged += new System.EventHandler(this.TxtDiscount_EditValueChanged);
-            this.TxtDiscount.Leave += new System.EventHandler(this.TxtDiscount_Leave);
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(69, 165);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 16);
-            this.label3.TabIndex = 82;
-            this.label3.Text = "Discount%";
-            // 
             // frmSalesInvoices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 538);
+            this.ClientSize = new System.Drawing.Size(1195, 538);
             this.Controls.Add(this.xtraTabControl1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1344,6 +1436,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RPtUnitPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RepTxtQty)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rppercentage)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
@@ -1356,6 +1449,8 @@
             this.gPaymentBox.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Txtguarantee.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TxtDiscount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtShopAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtTaxAmount.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TxtTaxPercentage.Properties)).EndInit();
@@ -1380,7 +1475,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DtEFrom2.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DtEFrom2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ErPro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TxtDiscount.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1479,5 +1573,11 @@
         private DevExpress.XtraEditors.TextEdit TxtComments;
         private DevExpress.XtraEditors.TextEdit TxtDiscount;
         private System.Windows.Forms.Label label3;
+        private DevExpress.XtraGrid.Columns.GridColumn Custom_Size;
+        private DevExpress.XtraGrid.Columns.GridColumn Percentage;
+        private DevExpress.XtraGrid.Columns.GridColumn Percentage_Amount;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit rppercentage;
+        private DevExpress.XtraEditors.TextEdit Txtguarantee;
+        private System.Windows.Forms.Label lblgurrentee;
     }
 }

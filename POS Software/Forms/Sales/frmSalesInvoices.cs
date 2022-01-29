@@ -42,11 +42,11 @@ namespace POS_Software.Forms.Sales
                 {
                     if (dt.Rows[i]["Item_Barcode"] != DBNull.Value)
                     {
-                        if (dt.Rows[i]["Item_Sale_Price"] != DBNull.Value && dt.Rows[i]["Qty"] != null)
+                        if (dt.Rows[i]["Item_Sale_Price"] != DBNull.Value && dt.Rows[i]["Qty"] != null && dt.Rows[i]["Percentage_Amount"] != DBNull.Value)
                         {
-                            V_GrandTotal += double.Parse(dt.Rows[i]["Amount"].ToString());
+                            V_GrandTotal += double.Parse(dt.Rows[i]["Percentage_Amount"].ToString());
                             TxtGrandAmount.Text = V_GrandTotal.ToString();
-                            TxtRecievePayment.Text = TxtShopAmount.Text;
+                           // TxtRecievePayment.Text = (Convert.ToDouble(TxtShopAmount.Text) - (Convert.ToDouble(TxtShopAmount.Text) * 0.10)).ToString();
                             discount = V_GrandTotal;
                         }
                     }
@@ -71,6 +71,9 @@ namespace POS_Software.Forms.Sales
             dt.Columns.Add("Stock_Critical_Level", typeof(string));
             dt.Columns.Add("IsPacked", typeof(string));
             dt.Columns.Add("Piece_Per_Pack", typeof(decimal));
+            dt.Columns.Add("Custom_Size", typeof(string));
+            dt.Columns.Add("Percentage", typeof(decimal));
+            dt.Columns.Add("Percentage_Amount", typeof(decimal));
 
 
             gridControl1.DataSource = dt;
@@ -207,7 +210,7 @@ namespace POS_Software.Forms.Sales
                         gridView1.SetRowCellValue(x, "Qty", VarQty);
                         gridView1.SetRowCellValue(x, "Amount", multi);
                         gridView1.UpdateCurrentRow();
-                        count();
+                        //count();
                         BarcodeCheck = 1;
                         TxtBarcode.Text = string.Empty;
                         TxtBarcode.Focus();
@@ -368,10 +371,10 @@ namespace POS_Software.Forms.Sales
                         {
                             //if (Convert.ToDouble(TxtBalance.EditValue) >= 0)
                             //{
-                                DalHandlar.RunQuery("insert into Sales.Sales_Invoice(Sale_ID,Invoice_No,Customer_Type,Customer_ID,Grand_Total,PaymentType_ID,CheckOrCreditNo,Recievd_Amount,TaxPercentage,TaxAmount,ShopAmount,Invoice_Date,Created_By,Created_Date,IsReturn,Active,Discount)Values(" + V_Sale_ID + "," + TxtInvoiceNumber.EditValue + "," + Convert.ToInt32(LuECustomerType_ID.EditValue) + "," + v_customerID + "," + TxtGrandAmount.Text + ","+Convert.ToInt32(LuEPaymentType_ID.EditValue) +",'"+TxtCheckOrCreditNo.Text+"',"+ TxtRecievePayment.Text + ",'"+TxtTaxPercentage.Text+"','"+TxtTaxAmount.Text+"','"+TxtShopAmount.Text+"','" + DtEInvoiceDate.DateTime.ToShortDateString() + "','" + TxtAdmin.EditValue + "','" + DateTime.Now.ToShortDateString() + "','" + false + "','" + true + "','"+TxtDiscount.Text+"')");
+                                DalHandlar.RunQuery("insert into Sales.Sales_Invoice(Sale_ID,Invoice_No,Customer_Type,Customer_ID,Grand_Total,PaymentType_ID,CheckOrCreditNo,Recievd_Amount,TaxPercentage,TaxAmount,ShopAmount,Invoice_Date,Created_By,Created_Date,IsReturn,Active,Discount,Ten_Percentage,gurrentee)Values(" + V_Sale_ID + "," + TxtInvoiceNumber.EditValue + "," + Convert.ToInt32(LuECustomerType_ID.EditValue) + "," + v_customerID + "," + TxtGrandAmount.Text + ","+Convert.ToInt32(LuEPaymentType_ID.EditValue) +",'"+TxtCheckOrCreditNo.Text+"',"+ TxtRecievePayment.Text + ",'"+TxtTaxPercentage.Text+"','"+TxtTaxAmount.Text+"','"+TxtShopAmount.Text+"','" + DtEInvoiceDate.DateTime.ToShortDateString() + "','" + TxtAdmin.EditValue + "','" + DateTime.Now.ToShortDateString() + "','" + false + "','" + true + "','"+TxtDiscount.Text+"','"+TxtBalance.Text+"','"+Txtguarantee+"')");
                                 for (var x = 0; x <= dt.Rows.Count - 1; x++)
                                 {
-                                    DalHandlar.RunQuery("insert into Sales.Sales_Invoice_Detail(Sales_Detail_ID,Sale_ID,Item_ID,Item_Barcode,Qty,Unit_Price,Pack_Price,Amount,Created_By,Created_Date) Values(" + V_Sales_Detail_ID + "," + V_Sale_ID + "," + dt.Rows[x]["Item_ID"] + ",'" + dt.Rows[x]["Item_Barcode"] + "'," + dt.Rows[x]["Qty"] + "," + dt.Rows[x]["Item_Sale_Price"] + "," + dt.Rows[x]["Pack_Price"] + "," + dt.Rows[x]["Amount"] + ",'" + TxtAdmin.EditValue + "','" + DateTime.Now.ToShortDateString() + "')");
+                                    DalHandlar.RunQuery("insert into Sales.Sales_Invoice_Detail(Sales_Detail_ID,Sale_ID,Item_ID,Item_Barcode,Qty,Unit_Price,Pack_Price,Amount,Created_By,Created_Date,Custom_Size,Percentage_Amount,Percentage) Values(" + V_Sales_Detail_ID + "," + V_Sale_ID + "," + dt.Rows[x]["Item_ID"] + ",'" + dt.Rows[x]["Item_Barcode"] + "'," + dt.Rows[x]["Qty"] + "," + dt.Rows[x]["Item_Sale_Price"] + "," + dt.Rows[x]["Pack_Price"] + "," + dt.Rows[x]["Amount"] + ",'" + TxtAdmin.EditValue + "','" + DateTime.Now.ToShortDateString() + "','" + dt.Rows[x]["Custom_Size"]+"','" + dt.Rows[x]["Percentage_Amount"]+"','" + dt.Rows[x]["Percentage"]+"')");
                                     if (checkstock == true)
                                     {
                                         DalHandlar.RunQuery("Update Stock.Stock Set Total_Stock=" + Convert.ToDouble(Convert.ToDouble(dt.Rows[x]["Total_Stock"]) - Convert.ToDouble(dt.Rows[x]["Qty"])) + ",Last_Updated='" + DateTime.Now.ToShortDateString() + "',Modify_By='" + TxtAdmin.EditValue + "'Where Item_Barcode='" + dt.Rows[x]["Item_Barcode"] + "'");
@@ -411,6 +414,8 @@ namespace POS_Software.Forms.Sales
                             dt.Columns.Add("discount", typeof(string));
                             dt.Columns.Add("discountamount", typeof(string));
                             dt.Columns.Add("paymenttype", typeof(string));
+                            dt.Columns.Add("guarantee", typeof(string));
+                            
                             //dt.Columns.Add("Comments", typeof(string));
 
 
@@ -421,7 +426,8 @@ namespace POS_Software.Forms.Sales
                                     dr["RecievedCash"] = TxtRecievePayment.EditValue;
                                     dr["TaxPercentage"] = TxtTaxPercentage.EditValue;
                                     dr["TaxAmount"] = TxtTaxAmount.EditValue;
-                                    dr["ShopAmount"] = TxtShopAmount.EditValue;
+                                dr["guarantee"] = Txtguarantee.Text;
+                                dr["ShopAmount"] = TxtShopAmount.EditValue;
                                     dr["Balance"] = TxtBalance.EditValue;
                                 dr["discount"] = TxtDiscount.EditValue;
                                 dr["discountamount"] = TxtGrandAmount.EditValue;
@@ -448,6 +454,7 @@ namespace POS_Software.Forms.Sales
                                     dr["Location"] = dtgetCustomer.Rows[0]["Location"].ToString();
                                     dr["CC1"] = dtgetCustomer.Rows[0]["CC1"].ToString();
                                     dr["CC2"] = dtgetCustomer.Rows[0]["CC2"].ToString();
+                                    
                                 }
                                 }
 
@@ -500,9 +507,10 @@ namespace POS_Software.Forms.Sales
                                 gridControl1.DataSource = null;
 
                                 TxtGrandAmount.Text = "0";
-                                TxtRecievePayment.Enabled = false;
+                                TxtRecievePayment.Enabled = true;
                                 TxtRecievePayment.Text = "0";
                                 TxtBalance.Text = "0";
+                        Txtguarantee.Text = "";
                                 TxtBarcode.Text = string.Empty;
                                 TxtCheckOrCreditNo.Enabled = false;
                                 TxtCheckOrCreditNo.Text = "0";
@@ -663,7 +671,7 @@ namespace POS_Software.Forms.Sales
             dt2 = new DataTable();
             gridControl1.DataSource = null;
             TxtGrandAmount.Text = "0";
-            TxtRecievePayment.Enabled = false;
+            TxtRecievePayment.Enabled = true;
             TxtRecievePayment.Text = "0";
             TxtBalance.Text = "0";
             TxtCheckOrCreditNo.Enabled = false;
@@ -823,20 +831,18 @@ namespace POS_Software.Forms.Sales
                 TxtCheckOrCreditNo.Enabled = true;
                 TxtRecievePayment.Visible = true;
                 lblReceivedAmount.Visible = true;
-                TxtRecievePayment.Text = "0";
-                if (TxtShopAmount.Text != string.Empty)
-                    TxtBalance.Text = (Convert.ToDouble(TxtShopAmount.Text) - Convert.ToDouble(TxtRecievePayment.Text)).ToString();
+               // TxtRecievePayment.Text = "0";
+               
                 
             }
             else
             {
                 TxtCheckOrCreditNo.Enabled = false;
                 TxtCheckOrCreditNo.Text = "0";
-                TxtRecievePayment.Visible = false;
-                lblReceivedAmount.Visible = false;
-                TxtRecievePayment.Text = TxtShopAmount.Text;
-                if(TxtShopAmount.Text!=string.Empty)
-                TxtBalance.Text = (Convert.ToDouble(TxtShopAmount.Text) - Convert.ToDouble(TxtRecievePayment.Text)).ToString();
+                TxtRecievePayment.Visible = true;
+                lblReceivedAmount.Visible = true;
+                //TxtRecievePayment.Text = TxtShopAmount.Text;
+                
 
             }
         }
@@ -873,8 +879,8 @@ namespace POS_Software.Forms.Sales
                 double grandamount = Convert.ToDouble( TxtGrandAmount.Text);
                 TxtTaxAmount.Text = ((Convert.ToDouble(TxtTaxPercentage.Text)/100) * grandamount).ToString();
                 TxtShopAmount.Text = Math.Round((grandamount + Convert.ToDouble(TxtTaxAmount.Text)),2).ToString();
-                TxtRecievePayment.Text = TxtShopAmount.Text;
-                TxtBalance.Text = (Convert.ToDouble(TxtShopAmount.Text) - Convert.ToDouble(TxtRecievePayment.Text)).ToString();
+                
+                
             }
         }
 
@@ -907,6 +913,7 @@ namespace POS_Software.Forms.Sales
                 lblTaxAmount.Text = General.resourceManager.GetString("lblTaxAmount", General.culture);
                 lblShopAmount.Text = General.resourceManager.GetString("lblShopAmount", General.culture);
                 lblCustomerName.Text = General.resourceManager.GetString("lblCustomerName", General.culture);
+                lblgurrentee.Text = General.resourceManager.GetString("lblgurrentee", General.culture);
 
                 gridView1.Columns["Item_Barcode"].Caption = General.resourceManager.GetString("Item_Barcode", General.culture);
                 gridView1.Columns["Item_Name"].Caption = General.resourceManager.GetString("Item_Name", General.culture);
@@ -914,6 +921,9 @@ namespace POS_Software.Forms.Sales
                 gridView1.Columns["Pack_Price"].Caption = General.resourceManager.GetString("PackPrice", General.culture);
                 gridView1.Columns["Qty"].Caption = General.resourceManager.GetString("Qty", General.culture);
                 gridView1.Columns["Amount"].Caption = General.resourceManager.GetString("Item_Amount", General.culture);
+                gridView1.Columns["Custom_Size"].Caption = General.resourceManager.GetString("Custom_Size", General.culture);
+                gridView1.Columns["Percentage"].Caption = General.resourceManager.GetString("Percentage", General.culture);
+                gridView1.Columns["Percentage_Amount"].Caption = General.resourceManager.GetString("Percentage_Amount", General.culture);
 
                 gridView2.Columns["Invoice_No"].Caption = General.resourceManager.GetString("lblInvoiceNumber", General.culture);
                 gridView2.Columns["Grand_Total"].Caption = General.resourceManager.GetString("Grand_Total", General.culture);
@@ -1006,6 +1016,46 @@ namespace POS_Software.Forms.Sales
         private void TxtDiscount_Leave(object sender, EventArgs e)
         {
            
+        }
+
+        private void rppercentage_EditValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void rppercentage_Leave(object sender, EventArgs e)
+        {
+            double VarQty = 0;
+            double multi = 0;
+            double sum = 0;
+
+            if (!string.IsNullOrWhiteSpace(gridView1.GetFocusedRowCellValue("Percentage").ToString()))
+            {
+                var str = Convert.ToDouble(gridView1.EditingValue);
+
+                if (str == 0)
+                {
+                    str = Convert.ToDouble(gridView1.GetFocusedRowCellValue("Percentage"));
+                }
+
+                if (str != 0)
+                {
+                    multi = Convert.ToDouble(gridView1.GetFocusedRowCellValue("Amount"));
+                    sum = (str / 100) * multi;
+
+                    gridView1.SetFocusedRowCellValue("Percentage_Amount", sum);
+                    count();
+                }
+            }
+        }
+
+        private void Txtguarantee_Leave(object sender, EventArgs e)
+        {
+            if (Txtguarantee.Text != null)
+            {
+                TxtRecievePayment.Text = (Convert.ToDouble(TxtShopAmount.Text) - (Convert.ToDouble(TxtShopAmount.Text) * (Convert.ToDouble(Txtguarantee.Text) / 100))).ToString();
+                TxtBalance.Text = (Convert.ToDouble(TxtShopAmount.Text) - Convert.ToDouble(TxtRecievePayment.Text)).ToString();
+            }
         }
     }
 }

@@ -530,7 +530,7 @@ namespace POS_Software.Forms.Sales
                         {
                             if (System.Windows.Forms.Application.OpenForms[2] != null)
                             {
-                                var report = new Reports.Sales.RptSalesInvoice_A4();
+                                var report = new Reports.Sales.RptSalesInvoice_A4Direct();
                                 report.DataSource = dtGridSave;
 
                                 if ((bool)Modules.General.dtsetting.Rows[2]["Setting_Value"] == true)
