@@ -39,7 +39,7 @@ namespace POS_Software.Reports.Sales
         private void lblGrandTotal_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
         {
             lblGrandTotal.Text = ": السعر الأجمالي قبل الضريبة";
-            lblRecievedCash.Text = "الأجمالي بعد الضريبة";
+            lblRecievedCash.Text = "الأجمالي شامل الضريبة";
             lblBalance.Text = value.Rows[0]["guarantee"].ToString()+"%"+ "ضمان أعمال  ";
             
            //string date = Convert.ToDateTime(strdate[0]).ToString("yyyy-MM-dd") + "T" + strdate[1] + "Z";

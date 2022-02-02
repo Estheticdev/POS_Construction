@@ -102,9 +102,9 @@ namespace POS_Software.Reports
 (CAST (SI.ShopAmount as float) - cast( SI.Recievd_Amount as float)) as Balance,SI.Invoice_No as InvoiceNumber, SI.Invoice_Date as Date,SI.Created_By as Created_By,
 case when SI.Customer_Type=1 then 'Walking Customer' else CD.Customer_Name end as Customer,CD.TaxNumber as TaxNumber,cd.Contact_Number as Contact_Number, 
 SD.Item_Barcode,ID.Item_Name,SD.Unit_Price as Item_Sale_Price, ID.Item_Sale_Price as unit_Price,SD.Qty,SD.Amount,SI.Created_Date,
-Case When IsReturn=1 then 'Yes' else 'No' end as IsReturn,
+Case When IsReturn=1 then 'Yes' else 'No' end as IsReturn,SD.Custom_Size,SD.Percentage,SD.Percentage_Amount,
 SD.Sales_Detail_ID,SD.Sale_ID,SD.Item_ID,SD.Item_Barcode,
-Case When Its.Size_Name='None' then ID.Item_Name Else ID.Item_Name + ' ' + Its.Size_Name END as Item_Name,
+Case When Its.Size_Name='None' then ID.Item_Name Else ID.Item_Name + ' ' + Its.Size_Name END as Item_Name,SI.gurrentee as guarantee,
 SD.Qty,SD.Unit_Price,SD.Amount,SI.PaymentType_ID as paymenttype 
 from Sales.Sales_Invoice AS SI
 left Join Sales.Sales_Invoice_Detail as SD on SI.Sale_ID =SD.Sale_ID
